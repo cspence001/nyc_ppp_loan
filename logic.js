@@ -26,30 +26,49 @@
 
 // // first need to dynamically fill dropdown / select options for each Industry
 // //filter for variable to eaqual array of each selected value 
+// function init() {
+    // var dropdown = d3.select("#selDataset"); 
+    // this gives an object with dates as keys
+    d3.csv("data/output/nycppprecipients_ind.csv").then((data)=> {
+        console.log(data);
+    const groups = data.reduce((groups, info) => {
+        const industry = info.Industry;
+        if (!groups[industry]) {
+        groups[industry] = [];
+        }
+        groups[industry].push(info);
+        return groups;
+    }, {});
+        const groupArrays = Object.keys(groups).map((industry) => {
+        return {
+        industry,
+        info: groups[industry]
+        };
+    });
+    console.log(groupArrays);
+        for (var i=0; i <groupArrays.length; i++) {  //starts in place of console.log
+        var industry = groupArrays[i].industry;
+        for (var i=0; i <industry.length; i++) {
+            console.log(industry);
+        }
+    
+        // var info = groupArrays[i].info;
+        // var jobsRetained = info[i].JobsRetained;
+        // var filteredData = groupArrays.filter(k => k.industry === "Health Care and Social Assistance")
+        // var JobsRetained = filteredData.map(k => k.JobsRetained);
+
+        // var sum = math.sum(jobsRetained);
+        // console.log(sum);
 
 
-// this gives an object with dates as keys
-d3.csv("data/output/nycppprecipients_ind.csv").then((data)=> {
-const groups = data.reduce((groups, info) => {
-    const industry = info.Industry;
-    if (!groups[industry]) {
-      groups[industry] = [];
-    }
-    groups[industry].push(info);
-    return groups;
-  }, {});
-    const groupArrays = Object.keys(groups).map((industry) => {
-    return {
-      industry,
-      info: groups[industry]
+        // console.log(jobsRetained);
+
+
+    console.log(industry);
     };
-  });
-    for (var i=0; i <groupArrays.length; i++) {  //starts in place of console.log
-      var industry = groupArrays[i].industry;
-
-  console.log(industry);
-}
-});
+    });
+//     }
+// init();
 
 
 // var dropdown = d3.select("#selDataset");  //dropdown before d3.csv 
@@ -57,9 +76,9 @@ const groups = data.reduce((groups, info) => {
 //   for (var i=0; i <groupArrays.length; i++) {  //starts in place of console.log
 //       var industry = groupArrays[i].industry;
 
-//       if (industry) {
-//           groupArrays.industry.forEach(function(name){
-//               dropdown.append("option").text(name).property("value", name);
-//           })
+    //   if (industry) {
+    //       groupArrays.industry.forEach(function(name){
+    //           dropdown.append("option").text(name).property("value", name);
+    //       })
 //   };
 // };
