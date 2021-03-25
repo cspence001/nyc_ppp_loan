@@ -3,42 +3,6 @@
 //     d3.csv("data/output/nycppprecipients_ind.csv").then((data)=>{
 
 
-//         var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
-//         //list of jobs counts for each loan for ind1
-//         var ind1jobstotallist = ind1jobslist;
-//         //sum of jobs counts for all loans for ind
-//         var ind1jobstotal = ind1jobssum;
-
-//         var ind1loanRanges_length // count of loans in each range per industry
-
-//         var ind1jobscount_sum // sum count of jobs in each range per industry
-        
-//         //bar
-//         yticks = ind1jobscount_sum; //values
-
-//         var bar_chart = [
-//             {
-//                 y: LoanRanges,
-//                 x: ind1jobscount_sum,
-//                 text: otu_labels.slice(0, 10).reverse(),
-//                 type: "bar",
-//                 orientation: "h"
-//             }
-//         ];
-
-//         var bar_layout = {
-//             title: "Jobs Counts per Loan Range",
-//             xaxis: {title: "Job Count"},
-//             yaxis: {title: "Loan Range"},
-//             margin: {t:30, l:100}
-//         };
-
-//         Plotly.newPlot("bar", bar_chart, bar_layout);
-
-//     })
-// }
-
-
     d3.csv("data/output/nycppprecipients_ind.csv").then((data)=> {
         console.log(data);
     const groups = data.reduce((groups, info) => {
@@ -64,7 +28,7 @@
         infos.push(groupArrays[i].info);
 
         };
-    console.log(industries); //list of industries
+    console.log(industries); //array of industries
     console.log(infos);//list of arrays with info for each loan in each industry
     // var indjobs1list = 0;
 
@@ -683,7 +647,8 @@
         //     console.log(ind10jobse)
    
 
-
+switch(dataset) {
+    case "ind1":
     // if (selection == "Accomodation and Food Services") {
         var ind1loanslistAll =ind1loanslist
         var ind1BusinessNameslist = ind1loansNamelist;
@@ -699,11 +664,11 @@
         var ind1jobscount = [ind1jobsa, ind1jobsb, ind1jobsc, ind1jobsd, ind1jobse];
         var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item));
         console.log(ind1jobscount_sum);
+        break;
+
 
     // }
-   
-
-
+    case "ind2":
     // if (selection == "Educational Services") {
         var ind2jobstotallist = ind2jobslist;
         //sum of jobs counts for all loans for ind
@@ -716,10 +681,10 @@
         var ind2jobscount = [ind2jobsa, ind2jobsb, ind2jobsc, ind2jobsd, ind2jobse];
         var ind2jobscount_sum = ind2jobscount.map((item) =>math.sum(item));
         console.log(ind2jobscount_sum);
-
+        break;
     // }
 
-
+    case "ind3":
     // if (selection == "Administrative and Support and Waste Management and Remediation Services") {
         var ind3jobstotallist = ind3jobslist;
         //sum of jobs counts for all loans for ind
@@ -732,9 +697,11 @@
         var ind3jobscount = [ind3jobsa, ind3jobsb, ind3jobsc, ind3jobsd, ind3jobse];
         var ind3jobscount_sum = ind3jobscount.map((item) =>math.sum(item));
         console.log(ind3jobscount_sum);
+        break;
 
     // }
 
+    case "ind4":
     // if (selection == "Professional, Scientific, and Technical Services") {
         var ind4jobstotallist = ind4jobslist;
         //sum of jobs counts for all loans for ind
@@ -750,7 +717,7 @@
 
     // }
 
-
+    case "ind5":
     // if (selection == "Manufacturing") {
         var ind5jobstotallist = ind5jobslist;
         //sum of jobs counts for all loans for ind
@@ -763,9 +730,12 @@
         var ind5jobscount = [ind5jobsa, ind5jobsb, ind5jobsc, ind5jobsd, ind5jobse];
         var ind5jobscount_sum = ind5jobscount.map((item) =>math.sum(item));
         console.log(ind5jobscount_sum);
-   
+        break;
 
-    // }
+    default:
+        break;
+
+}
     var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
    
     // var ind1BusinessNameslist = ind1loansNamelist;
@@ -831,15 +801,19 @@
      //panel
 
 
-
+}
 
 });
+
+function optionChanged(dataset) {
+    buildPlot(dataset);
+    // buildMetadata(id);
+}
 
 
     // if (selection == "Construction"){
 
     // }
-
 
     // if (selection == "Health Care and Social Assistance") {
 
@@ -866,24 +840,3 @@
     // "Utilities", 
     // "Management of Companies and Enterprises", 
     // "Mining"
-    
- 
-
-// // first need to dynamically fill dropdown / select options for each Industry
-// //filter for variable to eaqual array of each selected value 
-
-//     }
-// init();
-
-
-// var dropdown = d3.select("#selDataset");  //dropdown before d3.csv 
-
-//   for (var i=0; i <groupArrays.length; i++) {  //starts in place of console.log
-//       var industry = groupArrays[i].industry;
-
-    //   if (industry) {
-    //       groupArrays.industry.forEach(function(name){
-    //           dropdown.append("option").text(name).property("value", name);
-    //       })
-//   };
-// };
