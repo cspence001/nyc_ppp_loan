@@ -647,8 +647,8 @@
         //     console.log(ind10jobse)
    
 
-switch(dataset) {
-    case "ind1":
+// switch(dataset) {
+//     case "ind1":
     // if (selection == "Accomodation and Food Services") {
         var ind1loanslistAll =ind1loanslist
         var ind1BusinessNameslist = ind1loansNamelist;
@@ -664,11 +664,11 @@ switch(dataset) {
         var ind1jobscount = [ind1jobsa, ind1jobsb, ind1jobsc, ind1jobsd, ind1jobse];
         var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item));
         console.log(ind1jobscount_sum);
-        break;
+
 
 
     // }
-    case "ind2":
+    // case "ind2":
     // if (selection == "Educational Services") {
         var ind2jobstotallist = ind2jobslist;
         //sum of jobs counts for all loans for ind
@@ -681,10 +681,10 @@ switch(dataset) {
         var ind2jobscount = [ind2jobsa, ind2jobsb, ind2jobsc, ind2jobsd, ind2jobse];
         var ind2jobscount_sum = ind2jobscount.map((item) =>math.sum(item));
         console.log(ind2jobscount_sum);
-        break;
+
     // }
 
-    case "ind3":
+    // case "ind3":
     // if (selection == "Administrative and Support and Waste Management and Remediation Services") {
         var ind3jobstotallist = ind3jobslist;
         //sum of jobs counts for all loans for ind
@@ -697,11 +697,11 @@ switch(dataset) {
         var ind3jobscount = [ind3jobsa, ind3jobsb, ind3jobsc, ind3jobsd, ind3jobse];
         var ind3jobscount_sum = ind3jobscount.map((item) =>math.sum(item));
         console.log(ind3jobscount_sum);
-        break;
+
 
     // }
 
-    case "ind4":
+    // case "ind4":
     // if (selection == "Professional, Scientific, and Technical Services") {
         var ind4jobstotallist = ind4jobslist;
         //sum of jobs counts for all loans for ind
@@ -717,7 +717,7 @@ switch(dataset) {
 
     // }
 
-    case "ind5":
+    // case "ind5":
     // if (selection == "Manufacturing") {
         var ind5jobstotallist = ind5jobslist;
         //sum of jobs counts for all loans for ind
@@ -730,12 +730,12 @@ switch(dataset) {
         var ind5jobscount = [ind5jobsa, ind5jobsb, ind5jobsc, ind5jobsd, ind5jobse];
         var ind5jobscount_sum = ind5jobscount.map((item) =>math.sum(item));
         console.log(ind5jobscount_sum);
-        break;
+    //     break;
 
-    default:
-        break;
+    // default:
+    //     break;
 
-}
+
     var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
    
     // var ind1BusinessNameslist = ind1loansNamelist;
@@ -799,9 +799,6 @@ switch(dataset) {
 
 
      //panel
-
-
-}
 
 });
 
