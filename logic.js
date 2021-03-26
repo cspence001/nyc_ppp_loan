@@ -28,7 +28,7 @@
         infos.push(groupArrays[i].info);
 
         };
-    console.log(industries); //array of industries
+    console.log(industries); //array of all industries (names)
     console.log(infos);//list of arrays with info for each loan in each industry
     // var indjobs1list = 0;
 
@@ -694,33 +694,34 @@
         //     console.log(ind10jobse)
    
 
+
+
 // switch(dataset) {
 //     case "ind1":
     // if (selection == "Accomodation and Food Services") {
         var ind1loanslistAll =ind1loanslist
-        console.log(ind1loanslist)
+        console.log(ind1loanslistAll);
         var ind1BusinessNameslist = ind1loansNamelist;
         console.log(ind1BusinessNameslist);
         //list of jobs counts for each loan for ind1
         var ind1jobstotallist = ind1jobslist;
         console.log(ind1jobstotallist);
-        //sum of jobs counts for all loans for ind
-        var ind1jobstotal = ind1jobssum;
+        //sum of jobs counts for all loans for ind1
+        var ind1jobstotal = ind1jobssum; //sum # jobs for All Loans in Industry
+        console.log(ind1jobstotal);
         //array with number of loans for each loan range for ind1
         var ind1loanRanges =  [ind1loansa, ind1loansb, ind1loansc, ind1loansd, ind1loanse];
-        var ind1loanRanges_length = ind1loanRanges.map(item => item.length);
+        var ind1loanRanges_length = ind1loanRanges.map(item => item.length); //number loans each loan range 
         console.log(ind1loanRanges_length);
         //array with list of jobs for each loan range for ind1
         var ind1jobscount = [ind1jobsa, ind1jobsb, ind1jobsc, ind1jobsd, ind1jobse];
         //array with sum of jobs for each range in ind1
-        var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item));
+        var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item)); //sum # Jobs Retained each loan range
         console.log(ind1jobscount_sum);
-
 
     // case "ind2":
     // if (selection == "Educational Services") {
         var ind2loanslistAll =ind2loanslist
-        console.log(ind2loanslist)
         var ind2BusinessNameslist = ind2loansNamelist;
         //list of job counts for each loan for ind2
         var ind2jobstotallist = ind2jobslist;
@@ -729,17 +730,14 @@
         //array with number of loans for each loan range for ind2
         var ind2loanRanges =  [ind2loansa, ind2loansb, ind2loansc, ind2loansd, ind2loanse];
         var ind2loanRanges_length = ind2loanRanges.map(item => item.length);
-        console.log(ind2loanRanges_length);
-        //array with total number of jobs for each loan range for ind2
+        //array with list number of jobs for each loan range for ind2
         var ind2jobscount = [ind2jobsa, ind2jobsb, ind2jobsc, ind2jobsd, ind2jobse];
         var ind2jobscount_sum = ind2jobscount.map((item) =>math.sum(item));
-        console.log(ind2jobscount_sum);
 
 
     // case "ind3":
     // if (selection == "Administrative and Support and Waste Management and Remediation Services") {
         var ind3loanslistAll =ind3loanslist
-        console.log(ind3loanslist)
         var ind3BusinessNameslist = ind3loansNamelist;
         //list of job counts for each loan for ind3    
         var ind3jobstotallist = ind3jobslist;
@@ -748,17 +746,14 @@
         //array with number of loans for each loan range for ind3
         var ind3loanRanges =  [ind3loansa, ind3loansb, ind3loansc, ind3loansd, ind3loanse];
         var ind3loanRanges_length = ind3loanRanges.map(item => item.length);
-        console.log(ind3loanRanges_length);
-        //array with total number of jobs for each loan range for ind3
+        //array with list number of jobs for each loan range for ind3
         var ind3jobscount = [ind3jobsa, ind3jobsb, ind3jobsc, ind3jobsd, ind3jobse];
         var ind3jobscount_sum = ind3jobscount.map((item) =>math.sum(item));
-        console.log(ind3jobscount_sum);
 
 
     // case "ind4":
     // if (selection == "Professional, Scientific, and Technical Services") {
         var ind4loanslistAll =ind4loanslist
-        console.log(ind4loanslist)
         var ind4BusinessNameslist = ind4loansNamelist;
         //list of job counts for each loan for ind4   
         var ind4jobstotallist = ind4jobslist;
@@ -767,17 +762,14 @@
         //array with number of loans for each loan range for ind4
         var ind4loanRanges =  [ind4loansa, ind4loansb, ind4loansc, ind4loansd, ind4loanse];
         var ind4loanRanges_length = ind4loanRanges.map(item => item.length);
-        console.log(ind3loanRanges_length);
         //array with total number of jobs for each loan range for ind4
         var ind4jobscount = [ind4jobsa, ind4jobsb, ind4jobsc, ind4jobsd, ind4jobse];
         var ind4jobscount_sum = ind4jobscount.map((item) =>math.sum(item));
-        console.log(ind4jobscount_sum);
 
 
     // case "ind5":
     // if (selection == "Manufacturing") {
         var ind5loanslistAll =ind5loanslist
-        console.log(ind5loanslist)
         var ind5BusinessNameslist = ind5loansNamelist;
         //list of job counts for each loan for ind5   
         var ind5jobstotallist = ind5jobslist;
@@ -786,17 +778,14 @@
         //array with number of loans for each loan range for ind5
         var ind5loanRanges =  [ind5loansa, ind5loansb, ind5loansc, ind5loansd, ind5loanse];
         var ind5loanRanges_length = ind5loanRanges.map(item => item.length);
-        console.log(ind5loanRanges_length);
         //array with total number of jobs for each loan range for ind5
         var ind5jobscount = [ind5jobsa, ind5jobsb, ind5jobsc, ind5jobsd, ind5jobse];
         var ind5jobscount_sum = ind5jobscount.map((item) =>math.sum(item));
-        console.log(ind5jobscount_sum);
 
 
          // case "ind6":
-        // if (selection == "Manufacturing") {
+        // if (selection == "Construction") {
         var ind6loanslistAll =ind6loanslist
-        console.log(ind6loanslist)
         var ind6BusinessNameslist = ind5loansNamelist;
         //list of job counts for each loan for ind6   
         var ind6jobstotallist = ind6jobslist;
@@ -805,16 +794,13 @@
         //array with number of loans for each loan range for ind6
         var ind6loanRanges =  [ind6loansa, ind6loansb, ind6loansc, ind6loansd, ind6loanse];
         var ind6loanRanges_length = ind6loanRanges.map(item => item.length);
-        console.log(ind6loanRanges_length);
         //array with total number of jobs for each loan range for ind6
         var ind6jobscount = [ind6jobsa, ind6jobsb, ind6jobsc, ind6jobsd, ind6jobse];
         var ind6jobscount_sum = ind6jobscount.map((item) =>math.sum(item));
-        console.log(ind6jobscount_sum);
 
         // case "ind7":
-        // if (selection == "Manufacturing") {
+        //if (selection == "Health Care and Social Assistance") {
         var ind7loanslistAll =ind7loanslist
-        console.log(ind7loanslist)
         var ind7BusinessNameslist = ind7loansNamelist;
         //list of job counts for each loan for ind7   
         var ind7jobstotallist = ind7jobslist;
@@ -823,16 +809,13 @@
         //array with number of loans for each loan range for ind7
         var ind7loanRanges =  [ind7loansa, ind7loansb, ind7loansc, ind7loansd, ind7loanse];
         var ind7loanRanges_length = ind7loanRanges.map(item => item.length);
-        console.log(ind7loanRanges_length);
         //array with total number of jobs for each loan range for ind7
         var ind7jobscount = [ind7jobsa, ind7jobsb, ind7jobsc, ind7jobsd, ind7jobse];
         var ind7jobscount_sum = ind7jobscount.map((item) =>math.sum(item));
-        console.log(ind7jobscount_sum);
         
                 // case "ind8":
-        // if (selection == "Manufacturing") {
+        // if (selection == "Wholesale Trade") {
         var ind8loanslistAll =ind8loanslist
-        console.log(ind8loanslist)
         var ind8BusinessNameslist = ind8loansNamelist;
         //list of job counts for each loan for ind8   
         var ind8jobstotallist = ind8jobslist;
@@ -841,16 +824,13 @@
         //array with number of loans for each loan range for ind8
         var ind8loanRanges =  [ind8loansa, ind8loansb, ind8loansc, ind8loansd, ind8loanse];
         var ind8loanRanges_length = ind8loanRanges.map(item => item.length);
-        console.log(ind8loanRanges_length);
         //array with total number of jobs for each loan range for ind8
         var ind8jobscount = [ind8jobsa, ind8jobsb, ind8jobsc, ind8jobsd, ind8jobse];
         var ind8jobscount_sum = ind8jobscount.map((item) =>math.sum(item));
-        console.log(ind8jobscount_sum);
 
                         // case "ind9":
-        // if (selection == "Manufacturing") {
+        // if (selection == "Information") {
         var ind9loanslistAll =ind9loanslist
-        console.log(ind9loanslist)
         var ind9BusinessNameslist = ind9loansNamelist;
         //list of job counts for each loan for ind9  
         var ind9jobstotallist = ind9jobslist;
@@ -859,16 +839,13 @@
         //array with number of loans for each loan range for ind9
         var ind9loanRanges =  [ind9loansa, ind9loansb, ind9loansc, ind9loansd, ind9loanse];
         var ind9loanRanges_length = ind9loanRanges.map(item => item.length);
-        console.log(ind8loanRanges_length);
         //array with total number of jobs for each loan range for ind9
         var ind9jobscount = [ind9jobsa, ind9jobsb, ind9jobsc, ind9jobsd, ind9jobse];
         var ind9jobscount_sum = ind9jobscount.map((item) =>math.sum(item));
-        console.log(ind9jobscount_sum);
 
                                 // case "ind10":
-        // if (selection == "Manufacturing") {
+        // if (selection == "Finance and Insurance") {
         var ind10loanslistAll =ind10loanslist
-        console.log(ind10loanslist)
         var ind10BusinessNameslist = ind10loansNamelist;
         //list of job counts for each loan for ind10   
         var ind10jobstotallist = ind10jobslist;
@@ -877,32 +854,16 @@
         //array with number of loans for each loan range for ind10
         var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind9loanse];
         var ind10loanRanges_length = ind10loanRanges.map(item => item.length);
-        console.log(ind10loanRanges_length);
         //array with total number of jobs for each loan range for ind10
         var ind10jobscount = [ind10jobsa, ind10jobsb, ind10jobsc, ind10jobsd, ind10jobse];
         var ind10jobscount_sum = ind10jobscount.map((item) =>math.sum(item));
-        console.log(ind10jobscount_sum);
 
 
-
+    var industrylist = industries; // list of ALL industry names 
     var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
-   
-    // var ind1BusinessNameslist = ind1loansNamelist;
-    // //list of jobs counts for each loan for ind1
-    // var ind1jobstotallist = ind1jobslist;
-    // //sum of jobs counts for all loans for ind
-    // var ind1jobstotal = ind1jobssum;
-    //array with number of loans for each loan range for ind1
 
-    var ind1loanRanges_length = ind1loanRanges.map(item => item.length);
-
-    //array with total number of jobs for each loan range for ind1
-
-    var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item));
 
     //bar
-
-
     var bar_chart = [
         {
             y: LoanRanges,
@@ -956,33 +917,23 @@ function optionChanged(dataset) {
     // buildMetadata(id);
 }
 
-
-    // if (selection == "Construction"){
-
-    // }
-
-    // if (selection == "Health Care and Social Assistance") {
-
-    // }
-    // if (selection == "Wholesale Trade") {
-
-    // }
-    // if (selection == "Information") {
-
-    // }
-    // if (selection == "Finance and Insurance") {
-
-    // }
-
-    
-    
-    // "Other Services (except Public Administration)", 
-    // "Arts, Entertainment, and Recreation", 
-    // "Retail Trade", 
-    // "Real Estate Rental and Leasing", 
-    // "Transportation and Warehousing", 
-    // "Public Administration", 
-    // "Agriculture, Forestry, Fishing and Hunting", 
-    // "Utilities", 
-    // "Management of Companies and Enterprises", 
-    // "Mining"
+// "Accomodation and Food Services", 
+// "Educational Services", 
+// "Administrative and Support and Waste Management and Remediation Services", 
+// "Professional, Scientific, and Technical Services", 
+// "Manufacturing", 
+// "Construction", 
+// "Health Care and Social Assistance", 
+// "Wholesale Trade", 
+// "Information", 
+// "Finance and Insurance", 
+// "Other Services (except Public Administration)", 
+// "Arts, Entertainment, and Recreation", 
+// "Retail Trade", 
+// "Real Estate Rental and Leasing", 
+// "Transportation and Warehousing", 
+// "Public Administration", 
+// "Agriculture, Forestry, Fishing and Hunting", 
+// "Utilities", 
+// "Management of Companies and Enterprises", 
+// "Mining"
