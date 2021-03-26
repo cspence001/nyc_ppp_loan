@@ -852,15 +852,15 @@
         var ind9loanslistAll =ind9loanslist
         console.log(ind9loanslist)
         var ind9BusinessNameslist = ind9loansNamelist;
-        //list of job counts for each loan for ind8   
+        //list of job counts for each loan for ind9  
         var ind9jobstotallist = ind9jobslist;
-        //sum of jobs counts for all loans for ind8
+        //sum of jobs counts for all loans for ind9
         var ind9jobstotal = ind9jobssum;
-        //array with number of loans for each loan range for ind8
+        //array with number of loans for each loan range for ind9
         var ind9loanRanges =  [ind9loansa, ind9loansb, ind9loansc, ind9loansd, ind9loanse];
         var ind9loanRanges_length = ind9loanRanges.map(item => item.length);
         console.log(ind8loanRanges_length);
-        //array with total number of jobs for each loan range for ind8
+        //array with total number of jobs for each loan range for ind9
         var ind9jobscount = [ind9jobsa, ind9jobsb, ind9jobsc, ind9jobsd, ind9jobse];
         var ind9jobscount_sum = ind9jobscount.map((item) =>math.sum(item));
         console.log(ind9jobscount_sum);
@@ -870,15 +870,15 @@
         var ind10loanslistAll =ind10loanslist
         console.log(ind10loanslist)
         var ind10BusinessNameslist = ind10loansNamelist;
-        //list of job counts for each loan for ind8   
+        //list of job counts for each loan for ind10   
         var ind10jobstotallist = ind10jobslist;
-        //sum of jobs counts for all loans for ind8
+        //sum of jobs counts for all loans for ind10
         var ind10jobstotal = ind10jobssum;
-        //array with number of loans for each loan range for ind8
+        //array with number of loans for each loan range for ind10
         var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind9loanse];
         var ind10loanRanges_length = ind10loanRanges.map(item => item.length);
         console.log(ind10loanRanges_length);
-        //array with total number of jobs for each loan range for ind8
+        //array with total number of jobs for each loan range for ind10
         var ind10jobscount = [ind10jobsa, ind10jobsb, ind10jobsc, ind10jobsd, ind10jobse];
         var ind10jobscount_sum = ind10jobscount.map((item) =>math.sum(item));
         console.log(ind10jobscount_sum);
