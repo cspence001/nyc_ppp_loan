@@ -5,3 +5,15 @@ body,
   padding: 0;
   margin: 0;
 }
+
+
+#selDataset{
+  width: 120px;
+  height: 30px;
+}
+
+/*700px width for example*/
+
+#selDataset option {
+  width: 700px; /*default would be inherit*/
+  height: 60px; /*just changed for example*/ 

@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loan Dash</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
 </head>
 
@@ -22,10 +23,10 @@
     <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>Industry:</h5>
           <!-- dropdown  -->
           <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
-          <select id="selDataset" onchange="optionChanged()"></select>
+          <label for="selDataset">Industry:</label>
+          <select id="selDataset">
           <option value ="ind1">Accomodation and Food Services</option>
           <option value ="ind2">Educational Services</option>
           <option value ="ind3">Administrative and Support and Waste Management and Remediation Services</option>
@@ -36,6 +37,7 @@
           <option value ="ind8">Wholesale Trade</option>
           <option value ="ind9">Information</option>
           <option value ="ind10">Finance and Insurance</option>
+        </select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -47,8 +49,8 @@
       <div class="col-md-5">
         <div id="bar"></div>
       </div>
-      <div class="col-md-5">
-        <div id="pie"></div>
+      <div class="col-md-12">
+        <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
     <div class="row">
@@ -59,6 +61,11 @@
     <div class="row">
       <div class="col-md-12">
         <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="chartContainer3" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
   </div>

@@ -862,9 +862,8 @@
 
         var industrylist = industries; // list of ALL industry names in order as shown in log 31
         var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
-    
-        console.log(LoanRanges[0]);
-        console.log(ind1loanRanges_length[0]);
+
+        // stackedbar1
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title:{
@@ -998,6 +997,7 @@
         });
         chart.render();
 
+        //stacked bar 2
         var chart = new CanvasJS.Chart("chartContainer2", {
             animationEnabled: true,
             title:{
@@ -1130,6 +1130,134 @@
         ]
         });
         chart.render();
+
+        //stackedbar3
+        var chart = new CanvasJS.Chart("chartContainer3", {
+            animationEnabled: true,
+            title:{
+                text: "# of Loans Per Industry Each Range",
+                fontFamily:"Helvetica Neue"
+            },
+            toolTip: {
+                shared: true
+            },
+            data: [{
+                type: "stackedBar",
+                label: LoanRanges[0],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: industrylist[0], y: ind1loanRanges_length[0]},
+                    { label: industrylist[1], y: ind2loanRanges_length[0]},
+                    { label: industrylist[2], y: ind3loanRanges_length[0]},
+                    { label: industrylist[3], y: ind4loanRanges_length[0]},
+                    { label: industrylist[4], y: ind5loanRanges_length[0]},
+                    { label: industrylist[5], y: ind6loanRanges_length[0]},
+                    { label: industrylist[6], y: ind7loanRanges_length[0]},
+                    { label: industrylist[7], y: ind8loanRanges_length[0]},
+                    { label: industrylist[8], y: ind9loanRanges_length[0]},
+                    { label: industrylist[9], y: ind10loanRanges_length[0]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: LoanRanges[1],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: industrylist[0], y: ind1loanRanges_length[1]},
+                    { label: industrylist[1], y: ind2loanRanges_length[1]},
+                    { label: industrylist[2], y: ind3loanRanges_length[1]},
+                    { label: industrylist[3], y: ind4loanRanges_length[1]},
+                    { label: industrylist[4], y: ind5loanRanges_length[1]},
+                    { label: industrylist[5], y: ind6loanRanges_length[1]},
+                    { label: industrylist[6], y: ind7loanRanges_length[1]},
+                    { label: industrylist[7], y: ind8loanRanges_length[1]},
+                    { label: industrylist[8], y: ind9loanRanges_length[1]},
+                    { label: industrylist[9], y: ind10loanRanges_length[1]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: LoanRanges[2],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: industrylist[0], y: ind1loanRanges_length[2]},
+                    { label: industrylist[1], y: ind2loanRanges_length[2]},
+                    { label: industrylist[2], y: ind3loanRanges_length[2]},
+                    { label: industrylist[3], y: ind4loanRanges_length[2]},
+                    { label: industrylist[4], y: ind5loanRanges_length[2]},
+                    { label: industrylist[5], y: ind6loanRanges_length[2]},
+                    { label: industrylist[6], y: ind7loanRanges_length[2]},
+                    { label: industrylist[7], y: ind8loanRanges_length[2]},
+                    { label: industrylist[8], y: ind9loanRanges_length[2]},
+                    { label: industrylist[9], y: ind10loanRanges_length[2]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: LoanRanges[4],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: industrylist[0], y: ind1loanRanges_length[3]},
+                    { label: industrylist[1], y: ind2loanRanges_length[3]},
+                    { label: industrylist[2], y: ind3loanRanges_length[3]},
+                    { label: industrylist[3], y: ind4loanRanges_length[3]},
+                    { label: industrylist[4], y: ind5loanRanges_length[3]},
+                    { label: industrylist[5], y: ind6loanRanges_length[3]},
+                    { label: industrylist[6], y: ind7loanRanges_length[3]},
+                    { label: industrylist[7], y: ind8loanRanges_length[3]},
+                    { label: industrylist[8], y: ind9loanRanges_length[3]},
+                    { label: industrylist[9], y: ind10loanRanges_length[3]},
+                ]
+            },
+            // {
+            //     type: "stackedBar",
+            //     name: LoanRanges[5],
+            //     showInLegend: "true",
+            //     dataPoints: [
+            //         { label: industrylist[0], y: ind1loanRanges_length[4]},
+            //         { label: industrylist[1], y: ind2loanRanges_length[4]},
+            //         { label: industrylist[2], y: ind3loanRanges_length[4]},
+            //         { label: industrylist[3], y: ind4loanRanges_length[4]},
+            //         { label: industrylist[4], y: ind5loanRanges_length[4]},
+            //         { label: industrylist[5], y: ind6loanRanges_length[4]},
+            //         { label: industrylist[6], y: ind7loanRanges_length[4]},
+            //         { label: industrylist[7], y: ind8loanRanges_length[4]},
+            //         { label: industrylist[8], y: ind9loanRanges_length[4]},
+            //         { label: industrylist[9], y: ind10loanRanges_length[4]},
+            //     ]
+            // },
+        ]
+        });
+        chart.render();   
+        
+        //pie industry // for select industry page // percentages
+        var chart = new CanvasJS.Chart("chartContainer4", {
+            theme: "dark1", // "light1", "light2", "dark1", "dark2"
+            exportEnabled: true,
+            animationEnabled: true,
+            title: {
+                text: "Industry2 (for separate page)",
+                fontFamily:"Helvetica Neue"
+            },
+            data: [{
+                type: "pie",
+                startAngle: 25,
+                toolTipContent: "<b>{label}</b>: {y}",
+                showInLegend: "true",
+                legendText: "{label}",
+                indexLabelFontSize: 16,
+                indexLabel: "{label} - {y}",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind2loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind2loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind2loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind2loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind2loanRanges_length[4]},
+                ]
+            }]
+        });
+        chart.render();
+        
         
     });
 
