@@ -793,6 +793,97 @@
         console.log(ind5jobscount_sum);
 
 
+         // case "ind6":
+        // if (selection == "Manufacturing") {
+        var ind6loanslistAll =ind6loanslist
+        console.log(ind6loanslist)
+        var ind6BusinessNameslist = ind5loansNamelist;
+        //list of job counts for each loan for ind6   
+        var ind6jobstotallist = ind6jobslist;
+        //sum of jobs counts for all loans for ind6
+        var ind6jobstotal = ind6jobssum;
+        //array with number of loans for each loan range for ind6
+        var ind6loanRanges =  [ind6loansa, ind6loansb, ind6loansc, ind6loansd, ind6loanse];
+        var ind6loanRanges_length = ind6loanRanges.map(item => item.length);
+        console.log(ind6loanRanges_length);
+        //array with total number of jobs for each loan range for ind6
+        var ind6jobscount = [ind6jobsa, ind6jobsb, ind6jobsc, ind6jobsd, ind6jobse];
+        var ind6jobscount_sum = ind6jobscount.map((item) =>math.sum(item));
+        console.log(ind6jobscount_sum);
+
+        // case "ind7":
+        // if (selection == "Manufacturing") {
+        var ind7loanslistAll =ind7loanslist
+        console.log(ind7loanslist)
+        var ind7BusinessNameslist = ind7loansNamelist;
+        //list of job counts for each loan for ind7   
+        var ind7jobstotallist = ind7jobslist;
+        //sum of jobs counts for all loans for ind7
+        var ind7jobstotal = ind7jobssum;
+        //array with number of loans for each loan range for ind7
+        var ind7loanRanges =  [ind7loansa, ind7loansb, ind7loansc, ind7loansd, ind7loanse];
+        var ind7loanRanges_length = ind7loanRanges.map(item => item.length);
+        console.log(ind7loanRanges_length);
+        //array with total number of jobs for each loan range for ind7
+        var ind7jobscount = [ind7jobsa, ind7jobsb, ind7jobsc, ind7jobsd, ind7jobse];
+        var ind7jobscount_sum = ind7jobscount.map((item) =>math.sum(item));
+        console.log(ind7jobscount_sum);
+        
+                // case "ind8":
+        // if (selection == "Manufacturing") {
+        var ind8loanslistAll =ind8loanslist
+        console.log(ind8loanslist)
+        var ind8BusinessNameslist = ind8loansNamelist;
+        //list of job counts for each loan for ind8   
+        var ind8jobstotallist = ind8jobslist;
+        //sum of jobs counts for all loans for ind8
+        var ind8jobstotal = ind8jobssum;
+        //array with number of loans for each loan range for ind8
+        var ind8loanRanges =  [ind8loansa, ind8loansb, ind8loansc, ind8loansd, ind8loanse];
+        var ind8loanRanges_length = ind8loanRanges.map(item => item.length);
+        console.log(ind8loanRanges_length);
+        //array with total number of jobs for each loan range for ind8
+        var ind8jobscount = [ind8jobsa, ind8jobsb, ind8jobsc, ind8jobsd, ind8jobse];
+        var ind8jobscount_sum = ind8jobscount.map((item) =>math.sum(item));
+        console.log(ind8jobscount_sum);
+
+                        // case "ind9":
+        // if (selection == "Manufacturing") {
+        var ind9loanslistAll =ind9loanslist
+        console.log(ind9loanslist)
+        var ind9BusinessNameslist = ind9loansNamelist;
+        //list of job counts for each loan for ind8   
+        var ind9jobstotallist = ind9jobslist;
+        //sum of jobs counts for all loans for ind8
+        var ind9jobstotal = ind9jobssum;
+        //array with number of loans for each loan range for ind8
+        var ind9loanRanges =  [ind9loansa, ind9loansb, ind9loansc, ind9loansd, ind9loanse];
+        var ind9loanRanges_length = ind9loanRanges.map(item => item.length);
+        console.log(ind8loanRanges_length);
+        //array with total number of jobs for each loan range for ind8
+        var ind9jobscount = [ind9jobsa, ind9jobsb, ind9jobsc, ind9jobsd, ind9jobse];
+        var ind9jobscount_sum = ind9jobscount.map((item) =>math.sum(item));
+        console.log(ind9jobscount_sum);
+
+                                // case "ind10":
+        // if (selection == "Manufacturing") {
+        var ind10loanslistAll =ind10loanslist
+        console.log(ind10loanslist)
+        var ind10BusinessNameslist = ind10loansNamelist;
+        //list of job counts for each loan for ind8   
+        var ind10jobstotallist = ind10jobslist;
+        //sum of jobs counts for all loans for ind8
+        var ind10jobstotal = ind10jobssum;
+        //array with number of loans for each loan range for ind8
+        var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind9loanse];
+        var ind10loanRanges_length = ind10loanRanges.map(item => item.length);
+        console.log(ind10loanRanges_length);
+        //array with total number of jobs for each loan range for ind8
+        var ind10jobscount = [ind10jobsa, ind10jobsb, ind10jobsc, ind10jobsd, ind10jobse];
+        var ind10jobscount_sum = ind10jobscount.map((item) =>math.sum(item));
+        console.log(ind10jobscount_sum);
+
+
 
     var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
    

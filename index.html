@@ -24,7 +24,13 @@
         <div class="well">
           <h5>Industry:</h5>
           <!-- dropdown  -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+          <select id="selDataset" onchange="optionChanged()"></select>
+          <option value ="ind1">Accomodation and Food Services</option>
+          <option value ="ind2">Educational Services</option>
+          <option value ="ind3">Administrative and Support and Waste Management and Remediation Services</option>
+          <option value ="ind4">Professional, Scientific, and Technical Services</option>
+          <option value ="ind5">Manufacturing</option>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -37,7 +43,7 @@
         <div id="bar"></div>
       </div>
       <div class="col-md-5">
-        <div id="gauge"></div>
+        <div id="pie"></div>
       </div>
     </div>
     <div class="row">
