@@ -863,11 +863,13 @@
         var industrylist = industries; // list of ALL industry names in order as shown in log 31
         var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
     
-
+        console.log(LoanRanges[0]);
+        console.log(ind1loanRanges_length[0]);
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title:{
-                text: "# Loans Each Industry"
+                text: "# of Loans Per Loan Range Each Industry",
+                fontFamily:"Helvetica Neue"
             },
             toolTip: {
                 shared: true
@@ -877,11 +879,11 @@
                 name: industrylist[0],
                 showInLegend: "true",
                 dataPoints: [
-                    { x: LoanRanges[0], y: ind1loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind1loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind1loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind1loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind1loanRanges_length[4]},
+                    { label: LoanRanges[0], y: ind1loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind1loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind1loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind1loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind1loanRanges_length[4]},
                 ]
             },
             {
@@ -889,11 +891,11 @@
                 name: industrylist[1],
                 showInLegend: "true",
                 dataPoints: [
-                    { x: LoanRanges[0], y: ind2loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind2loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind2loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind2loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind2loanRanges_length[4]},
+                    { label: LoanRanges[0], y: ind2loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind2loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind2loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind2loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind2loanRanges_length[4]},
                 ]
             },
             {
@@ -901,11 +903,11 @@
                 name: industrylist[2],
                 showInLegend: "true",
                 dataPoints: [
-                    { x: LoanRanges[0], y: ind3loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind3loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind3loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind3loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind3loanRanges_length[4]},
+                    { label: LoanRanges[0], y: ind3loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind3loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind3loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind3loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind3loanRanges_length[4]},
                 ]
             },
             {
@@ -913,11 +915,11 @@
                 name: industrylist[3],
                 showInLegend: "true",
                 dataPoints: [
-                    { x: LoanRanges[0], y: ind4loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind4loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind4loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind4loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind4loanRanges_length[4]},
+                    { label: LoanRanges[0], y: ind4loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind4loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind4loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind4loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind4loanRanges_length[4]},
                 ]
             },
             {
@@ -925,13 +927,207 @@
                 name: industrylist[4],
                 showInLegend: "true",
                 dataPoints: [
-                    { x: LoanRanges[0], y: ind5loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind5loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind5loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind5loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind5loanRanges_length[4]},
+                    { label: LoanRanges[0], y: ind5loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind5loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind5loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind5loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind5loanRanges_length[4]},
                 ]
-            }]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[5],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind6loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind6loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind6loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind6loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind6loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[6],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind7loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind7loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind7loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind7loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind7loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[7],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind8loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind8loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind8loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind8loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind8loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[8],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind9loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind9loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind9loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind9loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind9loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[9],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind10loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind10loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind10loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind10loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind10loanRanges_length[4]},
+                ]
+            },
+        ]
+        });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            title:{
+                text: "# of Jobs Retained Per Loan Range Each Industry",
+                fontFamily:"Helvetica Neue"
+            },
+            toolTip: {
+                shared: true
+            },
+            data: [{
+                type: "stackedBar",
+                name: industrylist[0],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind1jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind1jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind1jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind1jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind1jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[1],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind2jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind2jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind2jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind2jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind2jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[2],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind3jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind3jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind3jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind3jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind3jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[3],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind4jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind4jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind4jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind4jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind4jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[4],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind5jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind5jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind5jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind5jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind5jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[5],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind6jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind6jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind6jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind6jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind6jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[6],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind7jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind7jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind7jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind7jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind7jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[7],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind8jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind8jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind8jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind8jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind8jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[8],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind9jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind9jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind9jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind9jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind9jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[9],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind10jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind10jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind10jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind10jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind10jobscount_sum[4]},
+                ]
+            },
+        ]
         });
         chart.render();
         

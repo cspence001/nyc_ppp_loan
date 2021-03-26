@@ -34,31 +34,7 @@ var trace1 = {
     }
   };
   
-  var trace4 = {
-    x: [22, 13, 9],
-    y: ['giraffes', 'orangutans', 'monkeys'],
-    name: 'NY Zoo',
-    orientation: 'h',
-    type: 'bar',
-    marker: {
-      color: 'rgb(193, 66, 66)',
-      width: 1
-    }
-  };
-
-  var trace5 = {
-    x: [22, 13, 9],
-    y: ['giraffes', 'orangutans', 'monkeys'],
-    name: 'NY Zoo',
-    orientation: 'h',
-    type: 'bar',
-    marker: {
-      color: 'rgb(193, 66, 66)',
-      width: 1
-    }
-  };
-  
-  var data = [trace1, trace2, trace3, trace4, t];
+  var data = [trace1, trace2, trace3];
   
   var layout = {
     title: 'Colored Bar Chart',

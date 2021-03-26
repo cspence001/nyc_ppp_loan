@@ -3,7 +3,13 @@ window.onload = function () {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
-		text: "# Loans Each Industry"
+		text: "Evening Sales in a Restaurant"
+	},
+	axisX: {
+		valueFormatString: "DDD"
+	},
+	axisY: {
+		prefix: "$"
 	},
 	toolTip: {
 		shared: true
@@ -14,8 +20,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "stackedBar",
-		name: industrylist[0],
+		name: industrylist,
 		showInLegend: "true",
+		xValueFormatString: "DD, MMM",
+		yValueFormatString: "$#,##0",
 		dataPoints: [
 			{ x: LoanRanges[0], y: ind1loanRanges_length[0]},
 			{ x: LoanRanges[1], y: ind1loanRanges_length[1]},
@@ -26,50 +34,58 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	{
 		type: "stackedBar",
-		name: industrylist[1],
+		name: "Snacks",
 		showInLegend: "true",
+		xValueFormatString: "DD, MMM",
+		yValueFormatString: "$#,##0",
 		dataPoints: [
-			{ x: LoanRanges[0], y: ind2loanRanges_length[0]},
-			{ x: LoanRanges[1], y: ind2loanRanges_length[1]},
-			{ x: LoanRanges[2], y: ind2loanRanges_length[2]},
-			{ x: LoanRanges[3], y: ind2loanRanges_length[3]},
-			{ x: LoanRanges[4], y: ind2loanRanges_length[4]},
+			{ x: new Date(2017, 0, 30), y: 86 },
+			{ x: new Date(2017, 0, 31), y: 95 },
+			{ x: new Date(2017, 1, 1), y: 71 },
+			{ x: new Date(2017, 1, 2), y: 58 },
+			{ x: new Date(2017, 1, 3), y: 60 },
 		]
 	},
 	{
 		type: "stackedBar",
-		name: industrylist[2],
+		name: "Drinks",
 		showInLegend: "true",
+		xValueFormatString: "DD, MMM",
+		yValueFormatString: "$#,##0",
 		dataPoints: [
-			{ x: LoanRanges[0], y: ind3loanRanges_length[0]},
-			{ x: LoanRanges[1], y: ind3loanRanges_length[1]},
-			{ x: LoanRanges[2], y: ind3loanRanges_length[2]},
-			{ x: LoanRanges[3], y: ind3loanRanges_length[3]},
-			{ x: LoanRanges[4], y: ind3loanRanges_length[4]},
+			{ x: new Date(2017, 0, 30), y: 48 },
+			{ x: new Date(2017, 0, 31), y: 45 },
+			{ x: new Date(2017, 1, 1), y: 41 },
+			{ x: new Date(2017, 1, 2), y: 55 },
+			{ x: new Date(2017, 1, 3), y: 80 },
 		]
 	},
 	{
 		type: "stackedBar",
-		name: industrylist[3],
+		name: "Dessert",
 		showInLegend: "true",
+		xValueFormatString: "DD, MMM",
+		yValueFormatString: "$#,##0",
 		dataPoints: [
-			{ x: LoanRanges[0], y: ind4loanRanges_length[0]},
-			{ x: LoanRanges[1], y: ind4loanRanges_length[1]},
-			{ x: LoanRanges[2], y: ind4loanRanges_length[2]},
-			{ x: LoanRanges[3], y: ind4loanRanges_length[3]},
-			{ x: LoanRanges[4], y: ind4loanRanges_length[4]},
+			{ x: new Date(2017, 0, 30), y: 61 },
+			{ x: new Date(2017, 0, 31), y: 55 },
+			{ x: new Date(2017, 1, 1), y: 61 },
+			{ x: new Date(2017, 1, 2), y: 75 },
+			{ x: new Date(2017, 1, 3), y: 80 },
 		]
 	},
 	{
 		type: "stackedBar",
-		name: industrylist[4],
+		name: "Takeaway",
 		showInLegend: "true",
+		xValueFormatString: "DD, MMM",
+		yValueFormatString: "$#,##0",
 		dataPoints: [
-			{ x: LoanRanges[0], y: ind5loanRanges_length[0]},
-			{ x: LoanRanges[1], y: ind5loanRanges_length[1]},
-			{ x: LoanRanges[2], y: ind5loanRanges_length[2]},
-			{ x: LoanRanges[3], y: ind5loanRanges_length[3]},
-			{ x: LoanRanges[4], y: ind5loanRanges_length[4]},
+			{ x: new Date(2017, 0, 30), y: 52 },
+			{ x: new Date(2017, 0, 31), y: 55 },
+			{ x: new Date(2017, 1, 1), y: 20 },
+			{ x: new Date(2017, 1, 2), y: 35 },
+			{ x: new Date(2017, 1, 3), y: 30 },
 		]
 	}]
 });
@@ -88,3 +104,102 @@ function toggleDataSeries(e) {
 }
 
 //https://canvasjs.com/javascript-charts/stacked-bar-chart/
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title:{
+        text: "Evening Sales in a Restaurant"
+    },
+    axisX: {
+        valueFormatString: "DDD"
+    },
+    axisY: {
+        prefix: "$"
+    },
+    toolTip: {
+        shared: true
+    },
+    data: [{
+        type: "stackedBar",
+        name: "Meals",
+        showInLegend: "true",
+        xValueFormatString: "DD, MMM",
+        yValueFormatString: "$#,##0",
+        dataPoints: [
+            { x: new Date(2017, 0, 30), y: 56 },
+            { x: new Date(2017, 0, 31), y: 45 },
+            { x: new Date(2017, 1, 1), y: 71 },
+            { x: new Date(2017, 1, 2), y: 41 },
+            { x: new Date(2017, 1, 3), y: 60 },
+            { x: new Date(2017, 1, 4), y: 75 },
+            { x: new Date(2017, 1, 5), y: 98 }
+        ]
+    },
+    {
+        type: "stackedBar",
+        name: "Snacks",
+        showInLegend: "true",
+        xValueFormatString: "DD, MMM",
+        yValueFormatString: "$#,##0",
+        dataPoints: [
+            { x: new Date(2017, 0, 30), y: 86 },
+            { x: new Date(2017, 0, 31), y: 95 },
+            { x: new Date(2017, 1, 1), y: 71 },
+            { x: new Date(2017, 1, 2), y: 58 },
+            { x: new Date(2017, 1, 3), y: 60 },
+            { x: new Date(2017, 1, 4), y: 65 },
+            { x: new Date(2017, 1, 5), y: 89 }
+        ]
+    },
+    {
+        type: "stackedBar",
+        name: "Drinks",
+        showInLegend: "true",
+        xValueFormatString: "DD, MMM",
+        yValueFormatString: "$#,##0",
+        dataPoints: [
+            { x: new Date(2017, 0, 30), y: 48 },
+            { x: new Date(2017, 0, 31), y: 45 },
+            { x: new Date(2017, 1, 1), y: 41 },
+            { x: new Date(2017, 1, 2), y: 55 },
+            { x: new Date(2017, 1, 3), y: 80 },
+            { x: new Date(2017, 1, 4), y: 85 },
+            { x: new Date(2017, 1, 5), y: 83 }
+        ]
+    },
+    {
+        type: "stackedBar",
+        name: "Dessert",
+        showInLegend: "true",
+        xValueFormatString: "DD, MMM",
+        yValueFormatString: "$#,##0",
+        dataPoints: [
+            { x: new Date(2017, 0, 30), y: 61 },
+            { x: new Date(2017, 0, 31), y: 55 },
+            { x: new Date(2017, 1, 1), y: 61 },
+            { x: new Date(2017, 1, 2), y: 75 },
+            { x: new Date(2017, 1, 3), y: 80 },
+            { x: new Date(2017, 1, 4), y: 85 },
+            { x: new Date(2017, 1, 5), y: 105 }
+        ]
+    },
+    {
+        type: "stackedBar",
+        name: "Takeaway",
+        showInLegend: "true",
+        xValueFormatString: "DD, MMM",
+        yValueFormatString: "$#,##0",
+        dataPoints: [
+            { x: new Date(2017, 0, 30), y: 52 },
+            { x: new Date(2017, 0, 31), y: 55 },
+            { x: new Date(2017, 1, 1), y: 20 },
+            { x: new Date(2017, 1, 2), y: 35 },
+            { x: new Date(2017, 1, 3), y: 30 },
+            { x: new Date(2017, 1, 4), y: 45 },
+            { x: new Date(2017, 1, 5), y: 25 }
+        ]
+    }]
+});
+chart.render();
+
+});

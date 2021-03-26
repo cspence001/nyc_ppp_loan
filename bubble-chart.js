@@ -1,3 +1,5 @@
+//https://kjschmidt913.github.io/data-visualization/
+
 var diameter = 900;
 var color = d3.scaleOrdinal(d3.schemeCategory20b);
 
