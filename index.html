@@ -31,6 +31,11 @@
           <option value ="ind3">Administrative and Support and Waste Management and Remediation Services</option>
           <option value ="ind4">Professional, Scientific, and Technical Services</option>
           <option value ="ind5">Manufacturing</option>
+          <option value ="ind6">Construction</option>
+          <option value ="ind7">Health Care and Social Assistance</option>
+          <option value ="ind8">Wholesale Trade</option>
+          <option value ="ind9">Information</option>
+          <option value ="ind10">Finance and Insurance</option>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -48,12 +53,14 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div id="bubble"></div>
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>   
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src="/plotly-challenge/static/js/app.js"></script> link for github pages deploy -->
   <script src="logic.js"></script> <!-- link for local server deploy-->
