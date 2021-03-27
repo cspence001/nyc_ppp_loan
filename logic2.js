@@ -1209,23 +1209,23 @@
                     { label: industrylist[9], y: ind10loanRanges_length[3]},
                 ]
             },
-            // {
-            //     type: "stackedBar",
-            //     name: LoanRanges[5],
-            //     showInLegend: "true",
-            //     dataPoints: [
-            //         { label: industrylist[0], y: ind1loanRanges_length[5]},
-            //         { label: industrylist[1], y: ind2loanRanges_length[5]},
-            //         { label: industrylist[2], y: ind3loanRanges_length[5]},
-            //         { label: industrylist[3], y: ind4loanRanges_length[5]},
-            //         { label: industrylist[4], y: ind5loanRanges_length[5]},
-            //         { label: industrylist[5], y: ind6loanRanges_length[5]},
-            //         { label: industrylist[6], y: ind7loanRanges_length[5]},
-            //         { label: industrylist[7], y: ind8loanRanges_length[5]},
-            //         { label: industrylist[8], y: ind9loanRanges_length[5]},
-            //         { label: industrylist[9], y: ind10loanRanges_length[5]},
-            //     ]
-            // },
+            {
+                type: "stackedBar",
+                name: LoanRanges[5],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: industrylist[0], y: ind1loanRanges_length[4]},
+                    { label: industrylist[1], y: ind2loanRanges_length[4]},
+                    { label: industrylist[2], y: ind3loanRanges_length[4]},
+                    { label: industrylist[3], y: ind4loanRanges_length[4]},
+                    { label: industrylist[4], y: ind5loanRanges_length[4]},
+                    { label: industrylist[5], y: ind6loanRanges_length[4]},
+                    { label: industrylist[6], y: ind7loanRanges_length[4]},
+                    { label: industrylist[7], y: ind8loanRanges_length[4]},
+                    { label: industrylist[8], y: ind9loanRanges_length[4]},
+                    { label: industrylist[9], y: ind10loanRanges_length[4]},
+                ]
+            },
         ]
         });
         chart.render();   
@@ -1259,7 +1259,7 @@
         chart.render();
 
         var chart = new CanvasJS.Chart("chartContainer5",{
-            theme: "dark2",
+            theme: "light1",
             title:{
                 text: "Ind2 Jobs Retained Per Loan Range"
             },
