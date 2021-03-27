@@ -1214,16 +1214,16 @@
             //     name: LoanRanges[5],
             //     showInLegend: "true",
             //     dataPoints: [
-            //         { label: industrylist[0], y: ind1loanRanges_length[4]},
-            //         { label: industrylist[1], y: ind2loanRanges_length[4]},
-            //         { label: industrylist[2], y: ind3loanRanges_length[4]},
-            //         { label: industrylist[3], y: ind4loanRanges_length[4]},
-            //         { label: industrylist[4], y: ind5loanRanges_length[4]},
-            //         { label: industrylist[5], y: ind6loanRanges_length[4]},
-            //         { label: industrylist[6], y: ind7loanRanges_length[4]},
-            //         { label: industrylist[7], y: ind8loanRanges_length[4]},
-            //         { label: industrylist[8], y: ind9loanRanges_length[4]},
-            //         { label: industrylist[9], y: ind10loanRanges_length[4]},
+            //         { label: industrylist[0], y: ind1loanRanges_length[5]},
+            //         { label: industrylist[1], y: ind2loanRanges_length[5]},
+            //         { label: industrylist[2], y: ind3loanRanges_length[5]},
+            //         { label: industrylist[3], y: ind4loanRanges_length[5]},
+            //         { label: industrylist[4], y: ind5loanRanges_length[5]},
+            //         { label: industrylist[5], y: ind6loanRanges_length[5]},
+            //         { label: industrylist[6], y: ind7loanRanges_length[5]},
+            //         { label: industrylist[7], y: ind8loanRanges_length[5]},
+            //         { label: industrylist[8], y: ind9loanRanges_length[5]},
+            //         { label: industrylist[9], y: ind10loanRanges_length[5]},
             //     ]
             // },
         ]
@@ -1232,11 +1232,11 @@
         
         //pie industry // for select industry page // percentages
         var chart = new CanvasJS.Chart("chartContainer4", {
-            theme: "dark1", // "light1", "light2", "dark1", "dark2"
+            theme: "light1", // "light1", "light2", "dark1", "dark2"
             exportEnabled: true,
             animationEnabled: true,
             title: {
-                text: "Industry2 (for separate page)",
+                text: "Industry2 Loans Per Range(for separate page)",
                 fontFamily:"Helvetica Neue"
             },
             data: [{
@@ -1257,9 +1257,27 @@
             }]
         });
         chart.render();
-        
-        
+
+        var chart = new CanvasJS.Chart("chartContainer5",{
+            theme: "dark2",
+            title:{
+                text: "Ind2 Jobs Retained Per Loan Range"
+            },
+            data: [{
+                type: "doughnut",
+                dataPoints: [
+                    { indexLabel: LoanRanges[0], y: ind2jobscount_sum[0]},
+                    { indexLabel: LoanRanges[1], y: ind2jobscount_sum[1]},
+                    { indexLabel: LoanRanges[2], y: ind2jobscount_sum[2]},
+                    { indexLabel: LoanRanges[3], y: ind2jobscount_sum[3]},
+                    { indexLabel: LoanRanges[4], y: ind2jobscount_sum[4]}
+                ]
+            }]
     });
+    chart.render();
+});
+
+    //convert labels for pie to percentage values
 
 
 // "Accomodation and Food Services", 

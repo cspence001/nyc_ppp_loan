@@ -863,81 +863,79 @@
         var industrylist = industries; // list of ALL industry names in order as shown in log 31
         var LoanRanges = ["a $5-10 million", "b $2-5 million", "c $1-2 million", "d $350,000-1 million", "e $150,000-350,000"]
     
+       
+        var loanData = {
+            "ind1": [
+                { label: LoanRanges[0], y: ind1loanRanges_length[0]},
+                { label: LoanRanges[1], y: ind1loanRanges_length[1]},
+                { label: LoanRanges[2], y: ind1loanRanges_length[2]},
+                { label: LoanRanges[3], y: ind1loanRanges_length[3]},
+                { label: LoanRanges[4], y: ind1loanRanges_length[4]},
+            ],
+            "ind2": [
+                { label: LoanRanges[0], y: ind2loanRanges_length[0]},
+                { label: LoanRanges[1], y: ind2loanRanges_length[1]},
+                { label: LoanRanges[2], y: ind2loanRanges_length[2]},
+                { label: LoanRanges[3], y: ind2loanRanges_length[3]},
+                { label: LoanRanges[4], y: ind2loanRanges_length[4]},
+            ],
+            "ind3": [
+                { label: LoanRanges[0], y: ind3loanRanges_length[0]},
+                { label: LoanRanges[1], y: ind3loanRanges_length[1]},
+                { label: LoanRanges[2], y: ind3loanRanges_length[2]},
+                { label: LoanRanges[3], y: ind3loanRanges_length[3]},
+                { label: LoanRanges[4], y: ind3loanRanges_length[4]},
+            ],
+            "ind4": [
+                { label: LoanRanges[0], y: ind4loanRanges_length[0]},
+                { label: LoanRanges[1], y: ind4loanRanges_length[1]},
+                { label: LoanRanges[2], y: ind4loanRanges_length[2]},
+                { label: LoanRanges[3], y: ind4loanRanges_length[3]},
+                { label: LoanRanges[4], y: ind4loanRanges_length[4]},
+            ],
+            "ind5": [
+                { label: LoanRanges[0], y: ind5loanRanges_length[0]},
+                { label: LoanRanges[1], y: ind5loanRanges_length[1]},
+                { label: LoanRanges[2], y: ind5loanRanges_length[2]},
+                { label: LoanRanges[3], y: ind5loanRanges_length[3]},
+                { label: LoanRanges[4], y: ind5loanRanges_length[4]},
+            ],
+            }
 
-        var chart = new CanvasJS.Chart("chartContainer", {
+        var dataPoints = [];
+        var chart = new CanvasJS.Chart("chartContainer4", {
+            theme: "dark1", // "light1", "light2", "dark1", "dark2"
+            exportEnabled: true,
             animationEnabled: true,
-            title:{
-                text: "# Loans Each Industry"
-            },
-            toolTip: {
-                shared: true
+            title: {
+                text: "# of Loans",
+                fontFamily:"Helvetica Neue"
             },
             data: [{
-                type: "stackedBar",
-                name: industrylist[0],
-                showInLegend: "true",
-                dataPoints: [
-                    { x: LoanRanges[0], y: ind1loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind1loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind1loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind1loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind1loanRanges_length[4]},
-                ]
-            },
-            {
-                type: "stackedBar",
-                name: industrylist[1],
-                showInLegend: "true",
-                dataPoints: [
-                    { x: LoanRanges[0], y: ind2loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind2loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind2loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind2loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind2loanRanges_length[4]},
-                ]
-            },
-            {
-                type: "stackedBar",
-                name: industrylist[2],
-                showInLegend: "true",
-                dataPoints: [
-                    { x: LoanRanges[0], y: ind3loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind3loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind3loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind3loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind3loanRanges_length[4]},
-                ]
-            },
-            {
-                type: "stackedBar",
-                name: industrylist[3],
-                showInLegend: "true",
-                dataPoints: [
-                    { x: LoanRanges[0], y: ind4loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind4loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind4loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind4loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind4loanRanges_length[4]},
-                ]
-            },
-            {
-                type: "stackedBar",
-                name: industrylist[4],
-                showInLegend: "true",
-                dataPoints: [
-                    { x: LoanRanges[0], y: ind5loanRanges_length[0]},
-                    { x: LoanRanges[1], y: ind5loanRanges_length[1]},
-                    { x: LoanRanges[2], y: ind5loanRanges_length[2]},
-                    { x: LoanRanges[3], y: ind5loanRanges_length[3]},
-                    { x: LoanRanges[4], y: ind5loanRanges_length[4]},
-                ]
+                type: "pie",
+                startAngle: 25,
+                toolTipContent: "<b>{label}</b>: {y}",
+                showInLegend: true,
+                legendText: "{label}",
+                indexLabelFontSize: 16,
+                indexLabel: "{label} - {y}",
+                dataPoints: dataPoints   
             }]
         });
         chart.render();
-        
+
+        $( ".dropdown" ).change(function() {
+            chart.options.data[0].dataPoints = [];
+        var e = document.getElementById("selDataset");
+            var selected = e.options[e.selectedIndex].value;
+        dps = loanData[selected];
+        for(var i in dps) {
+            var xVal = dps[i].label;
+            chart.options.data[0].dataPoints.push({x:(xVal), y: dps[i].y});
+        }
+        chart.render();
+        });
     });
-
-
 // "Accomodation and Food Services", 
 // "Educational Services", 
 // "Administrative and Support and Waste Management and Remediation Services", 
