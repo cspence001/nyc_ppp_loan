@@ -867,7 +867,7 @@
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title:{
-                text: "# of Loans Per Loan Range Each Industry",
+                text: "# of Loans Per Loan Range All Industry",
                 fontFamily:"Helvetica Neue"
             },
             toolTip: {
@@ -1001,7 +1001,7 @@
         var chart = new CanvasJS.Chart("chartContainer2", {
             animationEnabled: true,
             title:{
-                text: "# of Jobs Retained Per Loan Range Each Industry",
+                text: "# of Jobs Retained Per Loan Range All Industry",
                 fontFamily:"Helvetica Neue"
             },
             toolTip: {
@@ -1143,7 +1143,7 @@
             },
             data: [{
                 type: "stackedBar",
-                label: LoanRanges[0],
+                name: LoanRanges[0],
                 showInLegend: "true",
                 dataPoints: [
                     { label: industrylist[0], y: ind1loanRanges_length[0]},
