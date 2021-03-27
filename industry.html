@@ -17,12 +17,30 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>New York City PPP Loans</h1>
-        <a href= "industry.html"><p>Click here to explore the different industries</p></a>
+        <h1>New York City PPP Loans by Industry</h1>
+        <p>Use the dropdown menu below to explore the different industries</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
+        <div class="well">
+          <!-- dropdown  -->
+          <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+          <!-- <label for="selDataset">Industry:</label> -->
+          <select class="dropdown" id="selDataset">
+          <option value="" selected="selected">Industry</option>
+          <option value ="ind1">Accomodation and Food Services</option>
+          <option value ="ind2">Educational Services</option>
+          <option value ="ind3">Administrative and Support and Waste Management and Remediation Services</option>
+          <option value ="ind4">Professional, Scientific, and Technical Services</option>
+          <option value ="ind5">Manufacturing</option>
+          <option value ="ind6">Construction</option>
+          <option value ="ind7">Health Care and Social Assistance</option>
+          <option value ="ind8">Wholesale Trade</option>
+          <option value ="ind9">Information</option>
+          <option value ="ind10">Finance and Insurance</option>
+        </select>
+        </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Industry Info</h3>
@@ -35,6 +53,9 @@
       </div>
       <div class="col-md-12">
         <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
+      </div>
+      <div class="col-md-12">
+        <div id="chartContainer6" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
     <div class="row">
@@ -59,7 +80,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src="/plotly-challenge/static/js/app.js"></script> link for github pages deploy -->
-  <script src="logic.js"></script> <!-- link for local server deploy-->
+  <script src="../for_now/logic2.js"></script> <!-- link for local server deploy-->
 
 </body>
 
