@@ -936,7 +936,7 @@
                 { indexLabel: LoanRanges[4], y: ind10jobscount_sum[4]}
             ],
             }
-
+        
         
             var dataPoints2 = [];
             var chart = new CanvasJS.Chart("chartContainer6", {
@@ -956,22 +956,23 @@
                     legendText: "{label}",
                     indexLabelFontSize: 16,
                     indexLabel: "{label} - {y}",
-                    dataPoints: dataPoints2   
+                    dataPoints: dataPoints   
+                
                 }]
             });
             chart.render();
     
             $( ".dropdown" ).change(function() {
-                chart.options.data[0].dataPoints2 = [];
+                chart.options.data[0].dataPoints = [];
             var e = document.getElementById("selDataset");
                 var selected = e.options[e.selectedIndex].value;
             dps2 = jobsData[selected];
             for(var i in dps2) {
                 var xVal = dps2[i].label;
-                chart.options.data[0].dataPoints2.push({x:(xVal), y: dps2[i].y});
+                chart.options.data[0].dataPoints.push({x:(xVal), y: dps2[i].y});
             }
             chart.render();
-        
+        });
         var loanData = {
             "ind1": [
                 { label: LoanRanges[0], y: ind1loanRanges_length[0]},
@@ -1077,5 +1078,7 @@
             var xVal = dps[i].label;
             chart.options.data[0].dataPoints.push({x:(xVal), y: dps[i].y});
         }
+    })
         chart.render();
-        });
+        
+    });
