@@ -1194,7 +1194,7 @@
             },
             {
                 type: "stackedBar",
-                name: LoanRanges[4],
+                name: LoanRanges[3],
                 showInLegend: "true",
                 dataPoints: [
                     { label: industrylist[0], y: ind1loanRanges_length[3]},
@@ -1211,7 +1211,7 @@
             },
             {
                 type: "stackedBar",
-                name: LoanRanges[5],
+                name: LoanRanges[4],
                 showInLegend: "true",
                 dataPoints: [
                     { label: industrylist[0], y: ind1loanRanges_length[4]},
