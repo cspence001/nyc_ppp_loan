@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loan Dash</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../for_now/style2.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -18,11 +18,11 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>New York City PPP Loans by Industry</h1>
-        <p>Use the dropdown menu below to explore the different industries</p>
+        <p>Use the dropdown menu below to select and compare the different industries.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-6">
         <div class="well">
           <!-- dropdown  -->
           <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
@@ -40,39 +40,44 @@
           <option value ="ind9">Information</option>
           <option value ="ind10">Finance and Insurance</option>
         </select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Industry Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
+        </div> </div>
+        <div class="col-md-6"></div>
+        <div class="well">
+        <select class="dropdown" id="selDataset2">
+          <option value="" selected="selected">Industry</option>
+          <option value ="ind1">Accomodation and Food Services</option>
+          <option value ="ind2">Educational Services</option>
+          <option value ="ind3">Administrative and Support and Waste Management and Remediation Services</option>
+          <option value ="ind4">Professional, Scientific, and Technical Services</option>
+          <option value ="ind5">Manufacturing</option>
+          <option value ="ind6">Construction</option>
+          <option value ="ind7">Health Care and Social Assistance</option>
+          <option value ="ind8">Wholesale Trade</option>
+          <option value ="ind9">Information</option>
+          <option value ="ind10">Finance and Insurance</option>
+        </select>
         </div>
       </div>
-      <div class="col-md-8">
-        <div id="chartContainer5" style="height: 300px; width: 100%;"></div>
+      <div class="col-md-10 col align-self-end" style="height:100px;">
+        <div class='output'></div>
+        This is a paragraph column evenly sized with charts and end-justified.
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6">
         <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6">
+        <div id="chartContainer8" style="height: 300px; width: 100%;"></div>
+      </div>
+      <div class="col-md-6">
         <div id="chartContainer6" style="height: 300px; width: 100%;"></div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      <div class="col-md-6">
+        <div id="chartContainer10" style="height: 300px; width: 100%;"></div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+      <div class="col-md-6">
+      <table class="table table-striped table-hover"></table>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="chartContainer3" style="height: 400px; width: 100%;"></div>
-      </div>
-    </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>   
@@ -83,5 +88,4 @@
   <script src="../for_now/logic2.js"></script> <!-- link for local server deploy-->
 
 </body>
-
 </html>
