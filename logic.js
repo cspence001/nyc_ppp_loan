@@ -211,11 +211,192 @@
     var ind10jobsd = [];
     var ind10jobse = [];
 
+
+     // "Other Services (except Public Administration)"
+     var ind11loanslist = [];
+     var ind11loansNamelist = [];
+     var ind11jobslist = [];
+     var ind11jobssum = [];
+ 
+     var ind11loansa = [];
+     var ind11loansb = [];
+     var ind11loansc = [];
+     var ind11loansd = [];
+     var ind11loanse = [];
+ 
+     var ind11jobsa = [];
+     var ind11jobsb = [];
+     var ind11jobsc = [];
+     var ind11jobsd = [];
+     var ind11jobse = [];
+ 
+     // "Arts, Entertainment, and Recreation"
+     var ind12loanslist = [];
+     var ind12loansNamelist = [];
+     var ind12jobslist = [];
+     var ind12jobssum = [];
+ 
+     var ind12loansa = [];
+     var ind12loansb = [];
+     var ind12loansc = [];
+     var ind12loansd = [];
+     var ind12loanse = [];
+ 
+     var ind12jobsa = [];
+     var ind12jobsb = [];
+     var ind12jobsc = [];
+     var ind12jobsd = [];
+     var ind12jobse = [];
+ 
+     // "Retail Trade"
+     var ind13loanslist = [];
+     var ind13loansNamelist = [];
+     var ind13jobslist = [];
+     var ind13jobssum = [];
+ 
+     var ind13loansa = [];
+     var ind13loansb = [];
+     var ind13loansc = [];
+     var ind13loansd = [];
+     var ind13loanse = [];
+ 
+     var ind13jobsa = [];
+     var ind13jobsb = [];
+     var ind13jobsc = [];
+     var ind13jobsd = [];
+     var ind13jobse = [];
+ 
+    // "Real Estate Rental and Leasing"
+     var ind14loanslist = [];
+     var ind14loansNamelist = [];
+     var ind14jobslist = [];
+     var ind14jobssum = [];
+ 
+     var ind14loansa = [];
+     var ind14loansb = [];
+     var ind14loansc = [];
+     var ind14loansd = [];
+     var ind14loanse = [];
+ 
+     var ind14jobsa = [];
+     var ind14jobsb = [];
+     var ind14jobsc = [];
+     var ind14jobsd = [];
+     var ind14jobse = [];
+ 
+     // "Public Administration"
+     var ind15loanslist = [];
+     var ind15loansNamelist = [];
+     var ind15jobslist = [];
+     var ind15jobssum = [];
+ 
+     var ind15loansa = [];
+     var ind15loansb = [];
+     var ind15loansc = [];
+     var ind15loansd = [];
+     var ind15loanse = [];
+ 
+     var ind15jobsa = [];
+     var ind15jobsb = [];
+     var ind15jobsc = [];
+     var ind15jobsd = [];
+     var ind15jobse = [];
+ 
+     // "Agriculture, Forestry, Fishing and Hunting",
+     var ind16loanslist = [];
+     var ind16loansNamelist = [];
+     var ind16jobslist = [];
+     var ind16jobssum = [];
+ 
+     var ind16loansa = [];
+     var ind16loansb = [];
+     var ind16loansc = [];
+     var ind16loansd = [];
+     var ind16loanse = [];
+ 
+     var ind16jobsa = [];
+     var ind16jobsb = [];
+     var ind16jobsc = [];
+     var ind16jobsd = [];
+     var ind16jobse = [];
+ 
+     // Health Care and Social Assistance
+     var ind17loanslist = [];
+     var ind17loansNamelist = [];
+     var ind17jobslist = [];
+     var ind17jobssum = [];
+ 
+     var ind17loansa = [];
+     var ind17loansb = [];
+     var ind17loansc = [];
+     var ind17loansd = [];
+     var ind17loanse = [];
+ 
+     var ind17jobsa = [];
+     var ind17jobsb = [];
+     var ind17jobsc = [];
+     var ind17jobsd = [];
+     var ind17jobse = [];
+ 
+     // "Utilities"
+     var ind18loanslist = [];
+     var ind18loansNamelist = [];
+     var ind18jobslist = [];
+     var ind18jobssum = [];
+ 
+     var ind18loansa = [];
+     var ind18loansb = [];
+     var ind18loansc = [];
+     var ind18loansd = [];
+     var ind18loanse = [];
+     
+     var ind18jobsa = [];
+     var ind18jobsb = [];
+     var ind18jobsc = [];
+     var ind18jobsd = [];
+     var ind18jobse = [];
+ 
+     // "Management of Companies and Enterprises"
+     var ind19loanslist = [];
+     var ind19loansNamelist = [];
+     var ind19jobslist = [];
+     var ind19jobssum = [];
+ 
+     var ind19loansa = [];
+     var ind19loansb = [];
+     var ind19loansc = [];
+     var ind19loansd = [];
+     var ind19loanse = [];
+ 
+     var ind19jobsa = [];
+     var ind19jobsb = [];
+     var ind19jobsc = [];
+     var ind19jobsd = [];
+     var ind19jobse = [];
+ 
+    // "Mining"
+     var ind20loanslist = [];
+     var ind20loansNamelist = [];
+     var ind20jobslist = [];
+     var ind20jobssum = [];
+ 
+     var ind20loansa = [];
+     var ind20loansb = [];
+     var ind20loansc = [];
+     var ind20loansd = [];
+     var ind20loanse = [];
+ 
+     var ind20jobsa = [];
+     var ind20jobsb = [];
+     var ind20jobsc = [];
+     var ind20jobsd = [];
+     var ind20jobse = [];
+
     var totalJobsAllIndustry = [];
 
     for (var i=0; i<infos.length; i++) {
         var subArrays = infos[i];
-        //console.log(subArrays);
+        console.log(subArrays);
 
             for (var j = 0; j <subArrays.length; j++) {
                 
@@ -526,6 +707,306 @@
                     var ind10jobs = parseInt(subArrays[j].JobsRetained);
                      ind10jobslist.push(ind10jobs);
                      ind10jobssum =(math.sum(ind10jobslist));
+                }
+                if (subArrays[j].Industry == "Other Services (except Public Administration)") {
+                    var ind11loans = (subArrays[j].LoanRange);
+                    ind11loanslist.push(ind11loans);
+                    console.log(ind11loans); 
+                    if (ind11loans == loanRangea) {
+                        ind11loansa.push(ind11loans);
+                        ind11jobsa.push(ind11jobs);
+                    }
+                    else if (ind11loans ==loanRangeb) {
+                        ind11loansb.push(ind11loans)
+                        ind11jobsb.push(ind11jobs);
+                    }
+                    else if (ind11loans ==loanRangec) {
+                        ind11loansc.push(ind11loans)
+                        ind11jobsc.push(ind11jobs);
+                    }
+                    else if (ind11loans ==loanRanged) {
+                        ind11loansd.push(ind11loans)
+                        ind11jobsd.push(ind11jobs);
+                    }
+                    else if (ind11loans ==loanRangee) {
+                        ind11loanse.push(ind11loans)
+                        ind11jobse.push(ind11jobs);
+                    }
+                    var ind11loansNames = (subArrays[j].BusinessName)
+                    ind11loansNamelist.push(ind11loansNames);
+                    var ind11jobs = parseInt(subArrays[j].JobsRetained);
+                    ind11jobslist.push(ind11jobs);
+                    ind11jobssum =(math.sum(ind11jobslist));
+                }
+                else if (subArrays[j].Industry == "Arts, Entertainment, and Recreation") {
+                    var ind12loans = (subArrays[j].LoanRange);
+                    ind12loanslist.push(ind12loans);
+                    console.log(ind12loans);
+                    if (ind12loans == loanRangea) {
+                        ind12loansa.push(ind12loans)
+                        ind12jobsa.push(ind12jobs);
+                    }
+                    else if (ind12loans ==loanRangeb) {
+                        ind12loansb.push(ind12loans)
+                        ind12jobsb.push(ind12jobs);
+                    }
+                    else if (ind12loans ==loanRangec) {
+                        ind12loansc.push(ind12loans)
+                        ind12jobsc.push(ind12jobs);
+                    }
+                    else if (ind12loans ==loanRanged) {
+                        ind12loansd.push(ind12loans)
+                        ind12jobsd.push(ind12jobs);
+                    }
+                    else if (ind12loans ==loanRangee) {
+                        ind12loanse.push(ind12loans)
+                        ind12jobse.push(ind12jobs);
+                    }
+                     var ind12loansNames = (subArrays[j].BusinessName)
+                     ind12loansNamelist.push(ind12loansNames);
+                     var ind12jobs = parseInt(subArrays[j].JobsRetained);
+                     ind12jobslist.push(ind12jobs);
+                     ind12jobssum =(math.sum(ind12jobslist));
+                }
+                else if (subArrays[j].Industry == "Retail Trade") {
+                    var ind13loans = (subArrays[j].LoanRange);
+                    ind13loanslist.push(ind13loans);
+                    console.log(ind13loans);
+                    if (ind13loans == loanRangea) {
+                        ind13loansa.push(ind13loans)
+                        ind13jobsa.push(ind13jobs);
+                    }
+                    else if (ind13loans ==loanRangeb) {
+                        ind13loansb.push(ind13loans)
+                        ind13jobsb.push(ind13jobs);
+                    }
+                    else if (ind13loans ==loanRangec) {
+                        ind13loansc.push(ind13loans)
+                        ind13jobsc.push(ind13jobs);
+                    }
+                    else if (ind13loans ==loanRanged) {
+                        ind13loansd.push(ind13loans)
+                        ind13jobsd.push(ind13jobs);
+                    }
+                    else if (ind13loans ==loanRangee) {
+                        ind13loanse.push(ind13loans)
+                        ind13jobse.push(ind13jobs);
+                    }
+                     var ind13loansNames = (subArrays[j].BusinessName)
+                     ind13loansNamelist.push(ind13loansNames);
+                     var ind13jobs = parseInt(subArrays[j].JobsRetained);
+                     ind13jobslist.push(ind13jobs);
+                     ind13jobssum =(math.sum(ind13jobslist));
+                }
+                else if (subArrays[j].Industry == "Real Estate Rental and Leasing") {
+                    var ind14loans = (subArrays[j].LoanRange);
+                    ind14loanslist.push(ind14loans);
+                    console.log(ind14loans);
+                    if (ind14loans == loanRangea) {
+                        ind14loansa.push(ind14loans)
+                        ind14jobsa.push(ind14jobs);
+                    }
+                    else if (ind14loans ==loanRangeb) {
+                        ind14loansb.push(ind14loans)
+                        ind14jobsb.push(ind14jobs);
+                    }
+                    else if (ind14loans ==loanRangec) {
+                        ind14loansc.push(ind14loans)
+                        ind14jobsc.push(ind14jobs);
+                    }
+                    else if (ind14loans ==loanRanged) {
+                        ind14loansd.push(ind14loans)
+                        ind14jobsd.push(ind14jobs);
+                    }
+                    else if (ind14loans ==loanRangee) {
+                        ind14loanse.push(ind14loans)
+                        ind14jobse.push(ind14jobs);
+                    }
+                    var ind14loansNames = (subArrays[j].BusinessName)
+                    ind14loansNamelist.push(ind14loansNames);
+                    var ind14jobs = parseInt(subArrays[j].JobsRetained);
+                     ind14jobslist.push(ind14jobs);
+                     ind14jobssum =(math.sum(ind14jobslist));
+                }
+                else if (subArrays[j].Industry == "Transportation and Warehousing") {
+                    var ind15loans = (subArrays[j].LoanRange);
+                    ind15loanslist.push(ind15loans);
+                    console.log(ind15loans);
+                    if (ind15loans == loanRangea) {
+                        ind15loansa.push(ind15loans)
+                        ind15jobsa.push(ind15jobs);
+                    }
+                    else if (ind15loans ==loanRangeb) {
+                        ind15loansb.push(ind15loans)
+                        ind15jobsb.push(ind15jobs);
+                    }
+                    else if (ind15loans ==loanRangec) {
+                        ind15loansc.push(ind15loans)
+                        ind15jobsc.push(ind15jobs);
+                    }
+                    else if (ind15loans ==loanRanged) {
+                        ind15loansd.push(ind15loans)
+                        ind15jobsd.push(ind15jobs);
+                    }
+                    else if (ind15loans ==loanRangee) {
+                        ind15loanse.push(ind15loans)
+                        ind15jobse.push(ind15jobs);
+                    }
+                     var ind15loansNames = (subArrays[j].BusinessName)
+                     ind15loansNamelist.push(ind15loansNames);
+                     var ind15jobs = parseInt(subArrays[j].JobsRetained);
+                     ind15jobslist.push(ind15jobs);
+                     ind15jobssum =(math.sum(ind15jobslist));
+                }
+                else if (subArrays[j].Industry == "Public Administration") {
+                    var ind16loans = (subArrays[j].LoanRange);
+                    ind16loanslist.push(ind16loans);
+                    console.log(ind16loans);
+                    if (ind16loans == loanRangea) {
+                        ind16loansa.push(ind16loans)
+                        ind16jobsa.push(ind16jobs);
+                    }
+                    else if (ind16loans ==loanRangeb) {
+                        ind16loansb.push(ind16loans)
+                        ind16jobsb.push(ind16jobs);
+                    }
+                    else if (ind16loans ==loanRangec) {
+                        ind16loansc.push(ind16loans)
+                        ind16jobsc.push(ind16jobs);
+                    }
+                    else if (ind16loans ==loanRanged) {
+                        ind16loansd.push(ind16loans)
+                        ind16jobsd.push(ind16jobs);
+                    }
+                    else if (ind16loans ==loanRangee) {
+                        ind16loanse.push(ind16loans)
+                        ind16jobse.push(ind16jobs);
+                    }
+                    var ind16loansNames = (subArrays[j].BusinessName)
+                    ind16loansNamelist.push(ind16loansNames);
+                    var ind16jobs = parseInt(subArrays[j].JobsRetained);
+                     ind16jobslist.push(ind16jobs);
+                     ind16jobssum =(math.sum(ind16jobslist));
+                }
+                else if (subArrays[j].Industry == "Agriculture, Forestry, Fishing and Hunting") {
+                    var ind17loans = (subArrays[j].LoanRange);
+                    ind17loanslist.push(ind17loans);
+                    console.log(ind17loans);
+                    if (ind17loans == loanRangea) {
+                        ind17loansa.push(ind17loans)
+                        ind17jobsa.push(ind17jobs);
+                    }
+                    else if (ind17loans ==loanRangeb) {
+                        ind17loansb.push(ind17loans)
+                        ind17jobsb.push(ind17jobs);
+                    }
+                    else if (ind17loans ==loanRangec) {
+                        ind17loansc.push(ind17loans)
+                        ind17jobsc.push(ind17jobs);
+                    }
+                    else if (ind17loans ==loanRanged) {
+                        ind17loansd.push(ind17loans)
+                        ind17jobsd.push(ind17jobs);
+                    }
+                    else if (ind17loans ==loanRangee) {
+                        ind17loanse.push(ind17loans)
+                        ind17jobse.push(ind17jobs);
+                    }
+                    var ind17loansNames = (subArrays[j].BusinessName)
+                    ind17loansNamelist.push(ind17loansNames);
+                    var ind17jobs = parseInt(subArrays[j].JobsRetained);
+                     ind17jobslist.push(ind17jobs);
+                     ind17jobssum =(math.sum(ind17jobslist));
+                }
+                else if (subArrays[j].Industry == "Utilities") {
+                    var ind18loans = (subArrays[j].LoanRange);
+                    ind18loanslist.push(ind18loans);
+                    console.log(ind18loans);
+                    if (ind18loans == loanRangea) {
+                        ind18loansa.push(ind18loans)
+                        ind18jobsa.push(ind18jobs);
+                    }
+                    else if (ind18loans ==loanRangeb) {
+                        ind18loansb.push(ind18loans)
+                        ind18jobsb.push(ind18jobs);
+                    }
+                    else if (ind18loans ==loanRangec) {
+                        ind18loansc.push(ind18loans)
+                        ind18jobsc.push(ind18jobs);
+                    }
+                    else if (ind18loans ==loanRanged) {
+                        ind18loansd.push(ind18loans)
+                        ind18jobsd.push(ind18jobs);
+                    }
+                    else if (ind18loans ==loanRangee) {
+                        ind18loanse.push(ind18loans)
+                        ind18jobse.push(ind18jobs);
+                    }
+                    var ind18loansNames = (subArrays[j].BusinessName)
+                    ind18loansNamelist.push(ind18loansNames);
+                    var ind18jobs = parseInt(subArrays[j].JobsRetained);
+                     ind18jobslist.push(ind18jobs);
+                     ind18jobssum =(math.sum(ind18jobslist));
+                }
+                else if (subArrays[j].Industry == "Management of Companies and Enterprises") {
+                    var ind19loans = (subArrays[j].LoanRange);
+                    ind19loanslist.push(ind19loans);
+                    console.log(ind19loans);
+                    if (ind19loans == loanRangea) {
+                        ind19loansa.push(ind19loans)
+                        ind19jobsa.push(ind19jobs);
+                    }
+                    else if (ind19loans ==loanRangeb) {
+                        ind19loansb.push(ind19loans)
+                        ind19jobsb.push(ind19jobs);
+                    }
+                    else if (ind19loans ==loanRangec) {
+                        ind19loansc.push(ind19loans)
+                        ind19jobsc.push(ind19jobs);
+                    }
+                    else if (ind19loans ==loanRanged) {
+                        ind19loansd.push(ind19loans)
+                        ind19jobsd.push(ind19jobs);
+                    }
+                    else if (ind19loans ==loanRangee) {
+                        ind19loanse.push(ind19loans)
+                        ind19jobse.push(ind19jobs);
+                    }
+                    var ind19loansNames = (subArrays[j].BusinessName)
+                    ind19loansNamelist.push(ind19loansNames);
+                    var ind19jobs = parseInt(subArrays[j].JobsRetained);
+                     ind19jobslist.push(ind19jobs);
+                     ind19jobssum =(math.sum(ind19jobslist));
+                }
+                else if (subArrays[j].Industry == "Mining") {
+                    var ind20loans = (subArrays[j].LoanRange);
+                    ind20loanslist.push(ind20loans);
+                    console.log(ind20loans);
+                    if (ind20loans == loanRangea) {
+                        ind20loansa.push(ind20loans)
+                        ind20jobsa.push(ind20jobs);
+                    }
+                    else if (ind20loans ==loanRangeb) {
+                        ind20loansb.push(ind20loans)
+                        ind20jobsb.push(ind20jobs);
+                    }
+                    else if (ind20loans ==loanRangec) {
+                        ind20loansc.push(ind20loans)
+                        ind20jobsc.push(ind20jobs);
+                    }
+                    else if (ind20loans ==loanRanged) {
+                        ind20loansd.push(ind20loans)
+                        ind20jobsd.push(ind20jobs);
+                    }
+                    else if (ind20loans ==loanRangee) {
+                        ind20loanse.push(ind20loans)
+                        ind20jobse.push(ind20jobs);
+                    }
+                    var ind20loansNames = (subArrays[j].BusinessName)
+                    ind20loansNamelist.push(ind20loansNames);
+                    var ind20jobs = parseInt(subArrays[j].JobsRetained);
+                     ind20jobslist.push(ind20jobs);
+                     ind20jobssum =(math.sum(ind20jobslist));
                 }
     }
     }
@@ -862,21 +1343,176 @@
         var ind10jobscount_sum = ind10jobscount.map((item) =>math.sum(item));
 
 
+        // if (selection == "Other Services (except Public Administration)") {
+        var ind11loanslistAll =ind11loanslist
+        var ind11BusinessNameslist = ind11loansNamelist;
+        //list of jobs counts for each loan for ind11
+        var ind11jobstotallist = ind11jobslist;
+        //sum of jobs counts for all loans for ind11
+        var ind11jobstotal = ind11jobssum; //sum # jobs for All Loans in Industry
+        //array with number of loans for each loan range for ind11
+        var ind11loanRanges =  [ind11loansa, ind11loansb, ind11loansc, ind11loansd, ind11loanse];
+        var ind11loanRanges_length = ind11loanRanges.map(item => item.length); //number loans each loan range 
+        //array with list of jobs for each loan range for ind11
+        var ind11jobscount = [ind11jobsa, ind11jobsb, ind11jobsc, ind11jobsd, ind11jobse];
+        //array with sum of jobs for each range in ind11
+        var ind11jobscount_sum = ind11jobscount.map((item) =>math.sum(item)); //sum # Jobs Retained each loan range
+
+    // case "ind12":
+    // if (selection == "Arts, Entertainment, and Recreation") {
+        var ind12loanslistAll =ind12loanslist
+        var ind12BusinessNameslist = ind12loansNamelist;
+        //list of job counts for each loan for ind12
+        var ind12jobstotallist = ind12jobslist;
+        //sum of jobs counts for all loans for ind12
+        var ind12jobstotal = ind12jobssum;
+        //array with number of loans for each loan range for ind12
+        var ind12loanRanges =  [ind12loansa, ind12loansb, ind12loansc, ind12loansd, ind12loanse];
+        var ind12loanRanges_length = ind12loanRanges.map(item => item.length);
+        //array with list number of jobs for each loan range for ind12
+        var ind12jobscount = [ind12jobsa, ind12jobsb, ind12jobsc, ind12jobsd, ind12jobse];
+        var ind12jobscount_sum = ind12jobscount.map((item) =>math.sum(item));
+
+    // case "ind13":
+    // if (selection == "Retail Trade") {
+        var ind13loanslistAll =ind13loanslist
+        var ind13BusinessNameslist = ind13loansNamelist;
+        //list of job counts for each loan for ind13    
+        var ind13jobstotallist = ind13jobslist;
+        //sum of jobs counts for all loans for ind13
+        var ind13jobstotal = ind13jobssum;
+        //array with number of loans for each loan range for ind13
+        var ind13loanRanges =  [ind13loansa, ind13loansb, ind13loansc, ind13loansd, ind13loanse];
+        var ind13loanRanges_length = ind13loanRanges.map(item => item.length);
+        //array with list number of jobs for each loan range for ind13
+        var ind13jobscount = [ind13jobsa, ind13jobsb, ind13jobsc, ind13jobsd, ind13jobse];
+        var ind13jobscount_sum = ind13jobscount.map((item) =>math.sum(item));
+
+
+    // case "ind14":
+    // if (selection == "Real Estate Rental and Leasing") {
+        var ind14loanslistAll =ind14loanslist
+        var ind14BusinessNameslist = ind14loansNamelist;
+        //list of job counts for each loan for ind14   
+        var ind14jobstotallist = ind14jobslist;
+        //sum of jobs counts for all loans for ind14
+        var ind14jobstotal = ind14jobssum;
+        //array with number of loans for each loan range for ind14
+        var ind14loanRanges =  [ind14loansa, ind14loansb, ind14loansc, ind14loansd, ind14loanse];
+        var ind14loanRanges_length = ind14loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind14
+        var ind14jobscount = [ind14jobsa, ind14jobsb, ind14jobsc, ind14jobsd, ind14jobse];
+        var ind14jobscount_sum = ind14jobscount.map((item) =>math.sum(item));
+
+
+    // case "ind15":
+    // if (selection == "Transportation and Warehousing") {
+        var ind15loanslistAll =ind15loanslist
+        var ind15BusinessNameslist = ind15loansNamelist;
+        //list of job counts for each loan for ind15   
+        var ind15jobstotallist = ind15jobslist;
+        //sum of jobs counts for all loans for ind15
+        var ind15jobstotal = ind15jobssum;
+        //array with number of loans for each loan range for ind15
+        var ind15loanRanges =  [ind15loansa, ind15loansb, ind15loansc, ind15loansd, ind15loanse];
+        var ind15loanRanges_length = ind15loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind15
+        var ind15jobscount = [ind15jobsa, ind15jobsb, ind15jobsc, ind15jobsd, ind15jobse];
+        var ind15jobscount_sum = ind15jobscount.map((item) =>math.sum(item));
+
+
+         // case "ind16":
+        // if (selection == "Public Administration") {
+        var ind16loanslistAll =ind16loanslist
+        var ind16BusinessNameslist = ind5loansNamelist;
+        //list of job counts for each loan for ind16   
+        var ind16jobstotallist = ind16jobslist;
+        //sum of jobs counts for all loans for ind16
+        var ind16jobstotal = ind16jobssum;
+        //array with number of loans for each loan range for ind16
+        var ind16loanRanges =  [ind16loansa, ind16loansb, ind16loansc, ind16loansd, ind16loanse];
+        var ind16loanRanges_length = ind16loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind16
+        var ind16jobscount = [ind16jobsa, ind16jobsb, ind16jobsc, ind16jobsd, ind16jobse];
+        var ind16jobscount_sum = ind16jobscount.map((item) =>math.sum(item));
+
+        // case "ind17":
+        //if (selection == "Agriculture, Forestry, Fishing and Hunting") {
+        var ind17loanslistAll =ind17loanslist
+        var ind17BusinessNameslist = ind17loansNamelist;
+        //list of job counts for each loan for ind17   
+        var ind17jobstotallist = ind17jobslist;
+        //sum of jobs counts for all loans for ind17
+        var ind17jobstotal = ind17jobssum;
+        //array with number of loans for each loan range for ind17
+        var ind17loanRanges =  [ind17loansa, ind17loansb, ind17loansc, ind17loansd, ind17loanse];
+        var ind17loanRanges_length = ind17loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind17
+        var ind17jobscount = [ind17jobsa, ind17jobsb, ind17jobsc, ind17jobsd, ind17jobse];
+        var ind17jobscount_sum = ind17jobscount.map((item) =>math.sum(item));
+        
+                // case "ind18":
+        // if (selection == "Utilities") {
+        var ind18loanslistAll =ind18loanslist
+        var ind18BusinessNameslist = ind18loansNamelist;
+        //list of job counts for each loan for ind18   
+        var ind18jobstotallist = ind18jobslist;
+        //sum of jobs counts for all loans for ind18
+        var ind18jobstotal = ind18jobssum;
+        //array with number of loans for each loan range for ind18
+        var ind18loanRanges =  [ind18loansa, ind18loansb, ind18loansc, ind18loansd, ind18loanse];
+        var ind18loanRanges_length = ind18loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind18
+        var ind18jobscount = [ind18jobsa, ind18jobsb, ind18jobsc, ind18jobsd, ind18jobse];
+        var ind18jobscount_sum = ind18jobscount.map((item) =>math.sum(item));
+
+                        // case "ind19":
+        // if (selection == "Management of Companies and Enterprises",) {
+        var ind19loanslistAll =ind19loanslist
+        var ind19BusinessNameslist = ind19loansNamelist;
+        //list of job counts for each loan for ind19  
+        var ind19jobstotallist = ind19jobslist;
+        //sum of jobs counts for all loans for ind19
+        var ind19jobstotal = ind19jobssum;
+        //array with number of loans for each loan range for ind19
+        var ind19loanRanges =  [ind19loansa, ind19loansb, ind19loansc, ind19loansd, ind19loanse];
+        var ind19loanRanges_length = ind19loanRanges.map(item => item.length);
+        //array with total number of jobs for each loan range for ind19
+        var ind19jobscount = [ind19jobsa, ind19jobsb, ind19jobsc, ind19jobsd, ind19jobse];
+        var ind19jobscount_sum = ind19jobscount.map((item) =>math.sum(item));
+
+                                // case "ind20":
+        // if (selection == "Mining") {
+        var ind20loanslistAll =ind20loanslist
+        var ind20BusinessNameslist = ind20loansNamelist;
+        //list of job counts for each loan for ind20   
+        var ind20jobstotallist = ind20jobslist;
+        //sum of jobs counts for all loans for ind20
+        var ind20jobstotal = ind20jobssum;
+        //array with number of loans for each loan range for ind20
+        var ind20loanRanges =  [ind20loansa, ind20loansb, ind20loansc, ind20loansd, ind20loanse];
+        var ind20loanRanges_length = ind20loanRanges.map(item => item.length);
+        console.log(ind20loanRanges_length);
+        //array with total number of jobs for each loan range for ind20
+        var ind20jobscount = [ind20jobsa, ind20jobsb, ind20jobsc, ind20jobsd, ind20jobse];
+        var ind20jobscount_sum = ind20jobscount.map((item) =>math.sum(item));
+
+
 
          //adds all Jobs Retained from Loan range a 
-         var indJobsCountRangea = (ind1jobscount_sum[0] + ind2jobscount_sum[0] + ind3jobscount_sum[0] + ind4jobscount_sum[0] + ind5jobscount_sum[0] + ind6jobscount_sum[0] + ind7jobscount_sum[0] + ind8jobscount_sum[0] + ind9jobscount_sum[0] + ind10jobscount_sum[0]);
+         var indJobsCountRangea = (ind1jobscount_sum[0] + ind2jobscount_sum[0] + ind3jobscount_sum[0] + ind4jobscount_sum[0] + ind5jobscount_sum[0] + ind6jobscount_sum[0] + ind7jobscount_sum[0] + ind8jobscount_sum[0] + ind9jobscount_sum[0] + ind10jobscount_sum[0] + ind11jobscount_sum[0] + ind12jobscount_sum[0] + ind13jobscount_sum[0] + ind14jobscount_sum[0] + ind15jobscount_sum[0] + ind16jobscount_sum[0] + ind17jobscount_sum[0] + ind18jobscount_sum[0] + ind19jobscount_sum[0] + ind20jobscount_sum[0]);
          console.log(indJobsCountRangea);
          //adds all Jobs Retained from Loan range b
-         var indJobsCountRangeb = (ind1jobscount_sum[1] + ind2jobscount_sum[1] + ind3jobscount_sum[1] + ind4jobscount_sum[1] + ind5jobscount_sum[1] + ind6jobscount_sum[1] + ind7jobscount_sum[1] + ind8jobscount_sum[1] + ind9jobscount_sum[1] + ind10jobscount_sum[1]);
+         var indJobsCountRangeb = (ind1jobscount_sum[1] + ind2jobscount_sum[1] + ind3jobscount_sum[1] + ind4jobscount_sum[1] + ind5jobscount_sum[1] + ind6jobscount_sum[1] + ind7jobscount_sum[1] + ind8jobscount_sum[1] + ind9jobscount_sum[1] + ind10jobscount_sum[1] + ind11jobscount_sum[1] + ind12jobscount_sum[1] + ind13jobscount_sum[1] + ind14jobscount_sum[1] + ind15jobscount_sum[1] + ind16jobscount_sum[1] + ind17jobscount_sum[1] + ind18jobscount_sum[1] + ind19jobscount_sum[1] + ind20jobscount_sum[1]);
          console.log(indJobsCountRangeb);
          //adds all Jobs Retained from Loan range c
-         var indJobsCountRangec = (ind1jobscount_sum[2] + ind2jobscount_sum[2] + ind3jobscount_sum[2] + ind4jobscount_sum[2] + ind5jobscount_sum[2] + ind6jobscount_sum[2] + ind7jobscount_sum[2] + ind8jobscount_sum[2] + ind9jobscount_sum[2] + ind10jobscount_sum[2]);
+         var indJobsCountRangec = (ind1jobscount_sum[2] + ind2jobscount_sum[2] + ind3jobscount_sum[2] + ind4jobscount_sum[2] + ind5jobscount_sum[2] + ind6jobscount_sum[2] + ind7jobscount_sum[2] + ind8jobscount_sum[2] + ind9jobscount_sum[2] + ind10jobscount_sum[2] + ind11jobscount_sum[2] + ind12jobscount_sum[2] + ind13jobscount_sum[2] + ind14jobscount_sum[2] + ind15jobscount_sum[2] + ind16jobscount_sum[2] + ind17jobscount_sum[2] + ind18jobscount_sum[2] + ind19jobscount_sum[2] + ind20jobscount_sum[2]);
          console.log(indJobsCountRangec);
          //adds all Jobs Retained from Loan range d
-         var indJobsCountRanged = (ind1jobscount_sum[3] + ind2jobscount_sum[3] + ind3jobscount_sum[3] + ind4jobscount_sum[3] + ind5jobscount_sum[3] + ind6jobscount_sum[3] + ind7jobscount_sum[3] + ind8jobscount_sum[3] + ind9jobscount_sum[3] + ind10jobscount_sum[3]);
+         var indJobsCountRanged = (ind1jobscount_sum[3] + ind2jobscount_sum[3] + ind3jobscount_sum[3] + ind4jobscount_sum[3] + ind5jobscount_sum[3] + ind6jobscount_sum[3] + ind7jobscount_sum[3] + ind8jobscount_sum[3] + ind9jobscount_sum[3] + ind10jobscount_sum[3] + ind11jobscount_sum[3] + ind12jobscount_sum[3] + ind13jobscount_sum[3] + ind14jobscount_sum[3] + ind15jobscount_sum[3] + ind16jobscount_sum[3] + ind17jobscount_sum[3] + ind18jobscount_sum[3] + ind19jobscount_sum[3] + ind20jobscount_sum[3]);
          console.log(indJobsCountRanged);
          //adds all Jobs Retained from Loan range e
-         var indJobsCountRangee = (ind1jobscount_sum[4] + ind2jobscount_sum[4] + ind3jobscount_sum[4] + ind4jobscount_sum[4] + ind5jobscount_sum[4] + ind6jobscount_sum[4] + ind7jobscount_sum[4] + ind8jobscount_sum[4] + ind9jobscount_sum[4] + ind10jobscount_sum[4]);
+         var indJobsCountRangee = (ind1jobscount_sum[4] + ind2jobscount_sum[4] + ind3jobscount_sum[4] + ind4jobscount_sum[4] + ind5jobscount_sum[4] + ind6jobscount_sum[4] + ind7jobscount_sum[4] + ind8jobscount_sum[4] + ind9jobscount_sum[4] + ind10jobscount_sum[4] + ind11jobscount_sum[4] + ind12jobscount_sum[4] + ind13jobscount_sum[4] + ind14jobscount_sum[4] + ind15jobscount_sum[4] + ind16jobscount_sum[4] + ind17jobscount_sum[4] + ind18jobscount_sum[4] + ind19jobscount_sum[4] + ind20jobscount_sum[4]);
          console.log(indJobsCountRangee);
 
         //total # of Jobs ALL
@@ -884,7 +1520,6 @@
         console.log(indJobsCountRangeAll);
 
         var ind1JobsPercent = ((ind1jobstotal/indJobsCountRangeAll)* 100)
-        console.log(ind1JobsPercent);
         var ind2JobsPercent = ((ind2jobstotal/indJobsCountRangeAll)* 100)
         var ind3JobsPercent = ((ind3jobstotal/indJobsCountRangeAll)* 100)
         var ind4JobsPercent = ((ind4jobstotal/indJobsCountRangeAll)* 100)
@@ -894,18 +1529,28 @@
         var ind8JobsPercent = ((ind8jobstotal/indJobsCountRangeAll)* 100)
         var ind9JobsPercent = ((ind9jobstotal/indJobsCountRangeAll)* 100)
         var ind10JobsPercent = ((ind10jobstotal/indJobsCountRangeAll)* 100)
+        var ind11JobsPercent = ((ind11jobstotal/indJobsCountRangeAll)* 100)
+        var ind12JobsPercent = ((ind12jobstotal/indJobsCountRangeAll)* 100)
+        var ind13JobsPercent = ((ind13jobstotal/indJobsCountRangeAll)* 100)
+        var ind14JobsPercent = ((ind14jobstotal/indJobsCountRangeAll)* 100)
+        var ind15JobsPercent = ((ind15jobstotal/indJobsCountRangeAll)* 100)
+        var ind16JobsPercent = ((ind16jobstotal/indJobsCountRangeAll)* 100)
+        var ind17JobsPercent = ((ind17jobstotal/indJobsCountRangeAll)* 100)
+        var ind18JobsPercent = ((ind18jobstotal/indJobsCountRangeAll)* 100)
+        var ind19JobsPercent = ((ind19jobstotal/indJobsCountRangeAll)* 100)
+        var ind20JobsPercent = ((ind20jobstotal/indJobsCountRangeAll)* 100)
 
     
         //adds all Loans from Loan range a 
-        var indLoansCountRangea = (ind1loanRanges_length[0] + ind2loanRanges_length[0] + ind3loanRanges_length[0] + ind4loanRanges_length[0] + ind5loanRanges_length[0] + ind6loanRanges_length[0] + ind7loanRanges_length[0] + ind8loanRanges_length[0] + ind9loanRanges_length[0] + ind10loanRanges_length[0])
+        var indLoansCountRangea = (ind1loanRanges_length[0] + ind2loanRanges_length[0] + ind3loanRanges_length[0] + ind4loanRanges_length[0] + ind5loanRanges_length[0] + ind6loanRanges_length[0] + ind7loanRanges_length[0] + ind8loanRanges_length[0] + ind9loanRanges_length[0] + ind10loanRanges_length[0] + ind11loanRanges_length[0] + ind12loanRanges_length[0] + ind13loanRanges_length[0] + ind14loanRanges_length[0] + ind15loanRanges_length[0] + ind16loanRanges_length[0] + ind17loanRanges_length[0] + ind18loanRanges_length[0] + ind19loanRanges_length[0] + ind20loanRanges_length[0])
         //adds all Loans from Loan range b
-        var indLoansCountRangeb = (ind1loanRanges_length[1] + ind2loanRanges_length[1] + ind3loanRanges_length[1] + ind4loanRanges_length[1] + ind5loanRanges_length[1] + ind6loanRanges_length[1] + ind7loanRanges_length[1] + ind8loanRanges_length[1] + ind9loanRanges_length[1] + ind10loanRanges_length[1])
+        var indLoansCountRangeb = (ind1loanRanges_length[1] + ind2loanRanges_length[1] + ind3loanRanges_length[1] + ind4loanRanges_length[1] + ind5loanRanges_length[1] + ind6loanRanges_length[1] + ind7loanRanges_length[1] + ind8loanRanges_length[1] + ind9loanRanges_length[1] + ind10loanRanges_length[1] + ind11loanRanges_length[1] + ind12loanRanges_length[1] + ind13loanRanges_length[1] + ind14loanRanges_length[1] + ind15loanRanges_length[1] + ind16loanRanges_length[1] + ind17loanRanges_length[1] + ind18loanRanges_length[1] + ind19loanRanges_length[1] + ind20loanRanges_length[1])
         //adds all Loans from Loan range c
-        var indLoansCountRangec = (ind1loanRanges_length[2] + ind2loanRanges_length[2] + ind3loanRanges_length[2] + ind4loanRanges_length[2] + ind5loanRanges_length[2] + ind6loanRanges_length[2] + ind7loanRanges_length[2] + ind8loanRanges_length[2] + ind9loanRanges_length[2] + ind10loanRanges_length[2])
+        var indLoansCountRangec = (ind1loanRanges_length[2] + ind2loanRanges_length[2] + ind3loanRanges_length[2] + ind4loanRanges_length[2] + ind5loanRanges_length[2] + ind6loanRanges_length[2] + ind7loanRanges_length[2] + ind8loanRanges_length[2] + ind9loanRanges_length[2] + ind10loanRanges_length[2] + ind11loanRanges_length[2] + ind12loanRanges_length[2] + ind13loanRanges_length[2] + ind14loanRanges_length[2] + ind15loanRanges_length[2] + ind16loanRanges_length[2] + ind17loanRanges_length[2] + ind18loanRanges_length[2] + ind19loanRanges_length[2] + ind20loanRanges_length[2])
         //adds all Loans from Loan range d 
-        var indLoansCountRanged = (ind1loanRanges_length[3] + ind2loanRanges_length[3] + ind3loanRanges_length[3] + ind4loanRanges_length[3] + ind5loanRanges_length[3] + ind6loanRanges_length[3] + ind7loanRanges_length[3] + ind8loanRanges_length[3] + ind9loanRanges_length[3] + ind10loanRanges_length[3])
+        var indLoansCountRanged = (ind1loanRanges_length[3] + ind2loanRanges_length[3] + ind3loanRanges_length[3] + ind4loanRanges_length[3] + ind5loanRanges_length[3] + ind6loanRanges_length[3] + ind7loanRanges_length[3] + ind8loanRanges_length[3] + ind9loanRanges_length[3] + ind10loanRanges_length[3] + ind11loanRanges_length[3] + ind12loanRanges_length[3] + ind13loanRanges_length[3] + ind14loanRanges_length[3] + ind15loanRanges_length[3] + ind16loanRanges_length[3] + ind17loanRanges_length[3] + ind18loanRanges_length[3] + ind19loanRanges_length[3] + ind20loanRanges_length[3])
         //adds all Loans from Loan range e
-        var indLoansCountRangee = (ind1loanRanges_length[4] + ind2loanRanges_length[4] + ind3loanRanges_length[4] + ind4loanRanges_length[4] + ind5loanRanges_length[4] + ind6loanRanges_length[4] + ind7loanRanges_length[4] + ind8loanRanges_length[4] + ind9loanRanges_length[4] + ind10loanRanges_length[4])
+        var indLoansCountRangee = (ind1loanRanges_length[4] + ind2loanRanges_length[4] + ind3loanRanges_length[4] + ind4loanRanges_length[4] + ind5loanRanges_length[4] + ind6loanRanges_length[4] + ind7loanRanges_length[4] + ind8loanRanges_length[4] + ind9loanRanges_length[4] + ind10loanRanges_length[4] + ind11loanRanges_length[4] + ind12loanRanges_length[4] + ind13loanRanges_length[4] + ind14loanRanges_length[4] + ind15loanRanges_length[4] + ind16loanRanges_length[4] + ind17loanRanges_length[4] + ind18loanRanges_length[4] + ind19loanRanges_length[4] + ind20loanRanges_length[4])
 
         //total loans
         var indLoansCountRangeTotal = (indLoansCountRangea + indLoansCountRangeb + indLoansCountRangec + indLoansCountRanged + indLoansCountRangee)
@@ -938,6 +1583,16 @@
         ind8loansPercentofTotal = (((ind8loanslistAll.length)/indLoansCountRangeTotal)*100)
         ind9loansPercentofTotal = (((ind9loanslistAll.length)/indLoansCountRangeTotal)*100)
         ind10loansPercentofTotal = (((ind10loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind11loansPercentofTotal = (((ind11loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind12loansPercentofTotal = (((ind12loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind13loansPercentofTotal = (((ind13loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind14loansPercentofTotal = (((ind14loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind15loansPercentofTotal = (((ind15loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind16loansPercentofTotal = (((ind16loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind17loansPercentofTotal = (((ind17loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind18loansPercentofTotal = (((ind18loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind19loansPercentofTotal = (((ind19loanslistAll.length)/indLoansCountRangeTotal)*100)
+        ind20loansPercentofTotal = (((ind20loanslistAll.length)/indLoansCountRangeTotal)*100)
 
 
         var industrylist = industries; // list of ALL industry names in order as shown in log 31 (20)
@@ -1028,6 +1683,16 @@
                 { label: industrylist[7], y: ind8loanRanges_length[0]},
                 { label: industrylist[8], y: ind9loanRanges_length[0]},
                 { label: industrylist[9], y: ind10loanRanges_length[0]},
+                { label: industrylist[10], y: ind11loanRanges_length[0]},
+                { label: industrylist[11], y: ind12loanRanges_length[0]},
+                { label: industrylist[12], y: ind13loanRanges_length[0]},
+                { label: industrylist[13], y: ind14loanRanges_length[0]},
+                { label: industrylist[14], y: ind15loanRanges_length[0]},
+                { label: industrylist[15], y: ind16loanRanges_length[0]},
+                { label: industrylist[16], y: ind17loanRanges_length[0]},
+                { label: industrylist[17], y: ind18loanRanges_length[0]},
+                { label: industrylist[18], y: ind19loanRanges_length[0]},
+                { label: industrylist[19], y: ind20loanRanges_length[0]},
             ]
         },
         {
@@ -1045,6 +1710,16 @@
                 { label: industrylist[7], y: ind8loanRanges_length[1]},
                 { label: industrylist[8], y: ind9loanRanges_length[1]},
                 { label: industrylist[9], y: ind10loanRanges_length[1]},
+                { label: industrylist[10], y: ind11loanRanges_length[1]},
+                { label: industrylist[11], y: ind12loanRanges_length[1]},
+                { label: industrylist[12], y: ind13loanRanges_length[1]},
+                { label: industrylist[13], y: ind14loanRanges_length[1]},
+                { label: industrylist[14], y: ind15loanRanges_length[1]},
+                { label: industrylist[15], y: ind16loanRanges_length[1]},
+                { label: industrylist[16], y: ind17loanRanges_length[1]},
+                { label: industrylist[17], y: ind18loanRanges_length[1]},
+                { label: industrylist[18], y: ind19loanRanges_length[1]},
+                { label: industrylist[19], y: ind20loanRanges_length[1]},
             ]
         },
         {
@@ -1062,6 +1737,16 @@
                 { label: industrylist[7], y: ind8loanRanges_length[2]},
                 { label: industrylist[8], y: ind9loanRanges_length[2]},
                 { label: industrylist[9], y: ind10loanRanges_length[2]},
+                { label: industrylist[10], y: ind11loanRanges_length[2]},
+                { label: industrylist[11], y: ind12loanRanges_length[2]},
+                { label: industrylist[12], y: ind13loanRanges_length[2]},
+                { label: industrylist[13], y: ind14loanRanges_length[2]},
+                { label: industrylist[14], y: ind15loanRanges_length[2]},
+                { label: industrylist[15], y: ind16loanRanges_length[2]},
+                { label: industrylist[16], y: ind17loanRanges_length[2]},
+                { label: industrylist[17], y: ind18loanRanges_length[2]},
+                { label: industrylist[18], y: ind19loanRanges_length[2]},
+                { label: industrylist[19], y: ind20loanRanges_length[2]},
             ]
         },
         {
@@ -1079,6 +1764,16 @@
                 { label: industrylist[7], y: ind8loanRanges_length[3]},
                 { label: industrylist[8], y: ind9loanRanges_length[3]},
                 { label: industrylist[9], y: ind10loanRanges_length[3]},
+                { label: industrylist[10], y: ind11loanRanges_length[3]},
+                { label: industrylist[11], y: ind12loanRanges_length[3]},
+                { label: industrylist[12], y: ind13loanRanges_length[3]},
+                { label: industrylist[13], y: ind14loanRanges_length[3]},
+                { label: industrylist[14], y: ind15loanRanges_length[3]},
+                { label: industrylist[15], y: ind16loanRanges_length[3]},
+                { label: industrylist[16], y: ind17loanRanges_length[3]},
+                { label: industrylist[17], y: ind18loanRanges_length[3]},
+                { label: industrylist[18], y: ind19loanRanges_length[3]},
+                { label: industrylist[19], y: ind20loanRanges_length[3]},
             ]
         },
         {
@@ -1096,6 +1791,16 @@
                 { label: industrylist[7], y: ind8loanRanges_length[4]},
                 { label: industrylist[8], y: ind9loanRanges_length[4]},
                 { label: industrylist[9], y: ind10loanRanges_length[4]},
+                { label: industrylist[10], y: ind11loanRanges_length[4]},
+                { label: industrylist[11], y: ind12loanRanges_length[4]},
+                { label: industrylist[12], y: ind13loanRanges_length[4]},
+                { label: industrylist[13], y: ind14loanRanges_length[4]},
+                { label: industrylist[14], y: ind15loanRanges_length[4]},
+                { label: industrylist[15], y: ind16loanRanges_length[4]},
+                { label: industrylist[16], y: ind17loanRanges_length[4]},
+                { label: industrylist[17], y: ind18loanRanges_length[4]},
+                { label: industrylist[18], y: ind19loanRanges_length[4]},
+                { label: industrylist[19], y: ind20loanRanges_length[4]},
             ]
         },
     ]
@@ -1231,6 +1936,126 @@
                     { label: LoanRanges[2], y: ind10loanRanges_length[2]},
                     { label: LoanRanges[3], y: ind10loanRanges_length[3]},
                     { label: LoanRanges[4], y: ind10loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[10],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind11loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind11loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind11loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind11loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind11loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[11],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind12loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind12loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind12loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind12loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind12loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[12],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind13loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind13loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind13loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind13loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind13loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[13],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind14loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind14loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind14loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind14loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind14loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[14],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind15loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind15loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind15loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind15loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind15loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[15],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind16loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind16loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind16loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind16loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind16loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[16],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind17loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind17loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind17loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind17loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind17loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[17],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind18loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind18loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind18loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind18loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind18loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[18],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind19loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind19loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind19loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind19loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind19loanRanges_length[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[19],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind20loanRanges_length[0]},
+                    { label: LoanRanges[1], y: ind20loanRanges_length[1]},
+                    { label: LoanRanges[2], y: ind20loanRanges_length[2]},
+                    { label: LoanRanges[3], y: ind20loanRanges_length[3]},
+                    { label: LoanRanges[4], y: ind20loanRanges_length[4]},
                 ]
             },
         ]
@@ -1369,6 +2194,126 @@
                     { label: LoanRanges[4], y: ind10jobscount_sum[4]},
                 ]
             },
+            {
+                type: "stackedBar",
+                name: industrylist[10],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind11jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind11jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind11jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind11jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind11jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[11],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind12jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind12jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind12jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind12jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind12jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[12],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind13jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind13jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind13jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind13jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind13jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[13],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind14jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind14jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind14jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind14jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind14jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[14],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind15jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind15jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind15jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind15jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind15jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[15],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind16jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind16jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind16jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind16jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind16jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[16],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind17jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind17jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind17jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind17jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind17jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[17],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind18jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind18jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind18jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind18jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind18jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[18],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind19jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind19jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind19jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind19jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind19jobscount_sum[4]},
+                ]
+            },
+            {
+                type: "stackedBar",
+                name: industrylist[19],
+                showInLegend: "true",
+                dataPoints: [
+                    { label: LoanRanges[0], y: ind20jobscount_sum[0]},
+                    { label: LoanRanges[1], y: ind20jobscount_sum[1]},
+                    { label: LoanRanges[2], y: ind20jobscount_sum[2]},
+                    { label: LoanRanges[3], y: ind20jobscount_sum[3]},
+                    { label: LoanRanges[4], y: ind20jobscount_sum[4]},
+                ]
+            },
         ]
         });
         chart.render();
@@ -1385,6 +2330,16 @@
             {"Industry" : (industrylist[7]), "# of Loans" : (ind8loanslistAll.length), "% of Total" : (ind8loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind8jobstotal), "% of Total Jobs" : (ind8JobsPercent.toFixed(2))},
             {"Industry" : (industrylist[8]), "# of Loans" : (ind9loanslistAll.length), "% of Total" : (ind9loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind9jobstotal), "% of Total Jobs" : (ind9JobsPercent.toFixed(2))},
             {"Industry" : (industrylist[9]), "# of Loans" : (ind10loanslistAll.length), "% of Total" : (ind10loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind10jobstotal), "% of Total Jobs" : (ind10JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[10]), "# of Loans" : (ind11loanslistAll.length), "% of Total" : (ind11loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind11jobstotal), "% of Total Jobs" : (ind11JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[11]), "# of Loans" : (ind12loanslistAll.length), "% of Total" : (ind12loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind12jobstotal), "% of Total Jobs" : (ind12JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[12]), "# of Loans" : (ind13loanslistAll.length), "% of Total" : (ind13loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind13jobstotal), "% of Total Jobs" : (ind13JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[13]), "# of Loans" : (ind14loanslistAll.length), "% of Total" : (ind14loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind14jobstotal), "% of Total Jobs" : (ind14JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[14]), "# of Loans" : (ind15loanslistAll.length), "% of Total" : (ind15loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind15jobstotal), "% of Total Jobs" : (ind15JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[15]), "# of Loans" : (ind16loanslistAll.length), "% of Total" : (ind16loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind16jobstotal), "% of Total Jobs" : (ind16JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[16]), "# of Loans" : (ind17loanslistAll.length), "% of Total" : (ind17loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind17jobstotal), "% of Total Jobs" : (ind17JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[17]), "# of Loans" : (ind18loanslistAll.length), "% of Total" : (ind18loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind18jobstotal), "% of Total Jobs" : (ind18JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[18]), "# of Loans" : (ind19loanslistAll.length), "% of Total" : (ind19loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind19jobstotal), "% of Total Jobs" : (ind19JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[19]), "# of Loans" : (ind20loanslistAll.length), "% of Total" : (ind20loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind20jobstotal), "% of Total Jobs" : (ind20JobsPercent.toFixed(2))},
 
         ]
         function tabulate(industryTableData, columns) {
