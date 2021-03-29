@@ -17,3 +17,17 @@ tr:nth-child(5n+2) {background:#eee;}
 tr:nth-child(5n+3) {background:#ddd;}
 tr:nth-child(5n+4) {background:#ccc;}
 tr:nth-child(5n+0) {background:#bbb;}
+
+
+
+.col-md-6 {
+  padding-top:40px;
+  padding-bottom:40px;
+
+}
+
+.col-md-12 {
+  padding-top:40px;
+  padding-bottom:40px;
+
+}
