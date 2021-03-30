@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loan Dash</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="static/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script src ="../static/lib/canvasjs.min.js" charset="utf-8"></script> -->
@@ -25,25 +25,28 @@
     <div class="row">
       <div class="col-md-2">
         <div class="panel panel-primary">
-          <!-- <div class="panel-heading">
+          <div class="panel-heading">
             <h3 class="panel-title">NYC Loan Totals</h3>
-          </div> -->
-          <!-- <div id="sample-metadata" class="panel-body"></div> -->
-          <!-- <h5>Total Loans: 17550</h5>
+          </div>
+          <div id="sample-metadata" class="panel-body">
+          <h5>Total Loans: 17550</h5>
           <h5>Total Industries: 20</h5>
-          <h5>Total Jobs: 766874 </h5> -->
+          <h5>Total Jobs: 766874 </h5>
         </div>
-      </div>
+        </div>
+      </div> 
       <div class="col-md-10 col align-self-end" style="height:440px;">
         <table class="table table-striped table-responsive"></table>
       </div>
       <div class="col-md-6">
         <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
+        <br>
         <p>The above chart shows how many total jobs were retained per Loan Range.</p>
       </div>
       <br>
       <div class="col-md-6">
         <div id="chartContainer5" style="height: 300px; width: 100%;"></div>
+        <br>
         <p>The above pie chart shows total loans dispensed per Loan Range.</p>
       </div>
       <br>
@@ -51,6 +54,7 @@
     <div class="row">
       <div class="col-md-12">
         <div id="chartContainer3" style="height: 500px; width: 100%;"></div>
+        <br>
         <p>This chart shows the number of loans that were issued for each of the 20 industries as determined by loan range.</p>
       </div>
     </div>
@@ -58,6 +62,7 @@
     <div class="row">
       <div class="col-md-12">
         <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <br>
         <p>This chart shows how many loans were issued in each loan range. This chart looks at how many loans were issued for all industries.</p>
       </div>
     </div>
@@ -65,6 +70,7 @@
     <div class="row">
       <div class="col-md-12">
         <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+        <br>
         <p>The final chart shows the number of jobs retained in each loan range. It is an overall look at all industries.</p>
       </div>
     </div>
