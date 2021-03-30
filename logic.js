@@ -1663,7 +1663,7 @@
         title:{
             text: "# of Loans Per Industry Each Range",
             fontFamily: "sans-serif",
-            fontSize: 20,
+            fontSize: 12,
         },
         toolTip: {
             shared: true
