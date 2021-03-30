@@ -10,6 +10,11 @@ body{
   margin-right: 5px;
 }
 
+p {
+  font-size: 40;
+  font-weight: bold;
+}
+
 
 /*700px width for example*/
 
