@@ -1433,6 +1433,7 @@
 // "Wholesale Trade", 
 // "Information", 
 // "Finance and Insurance", 
+
 // "Other Services (except Public Administration)", 
 // "Arts, Entertainment, and Recreation", 
 // "Retail Trade", 
