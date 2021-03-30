@@ -1,9 +1,8 @@
 // function buildPlot(industryType) {
 //     //need for panel metadata
 //     d3.csv("data/output/nycppprecipients_ind.csv").then((data)=>{
-    console.log("test")
 
-    d3.csv("http://localhost:5000/nycppprecipients_ind.csv").then((data)=> {
+    d3.csv("../data/output/nycppprecipients_ind.csv").then((data)=> {
         console.log(data);
     const groups = data.reduce((groups, info) => {
         const industry = info.Industry;
