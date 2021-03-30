@@ -1663,8 +1663,16 @@
         title:{
             text: "# of Loans Per Industry Each Range",
             fontFamily: "sans-serif",
-            fontSize: 12,
+            fontSize: 20,
         },
+        axisY:{
+            labelFontSize: 12,
+          },
+        axisX:{
+            labelFontSize: 12,
+            interval: 1,
+            reversed:  true
+          },
         toolTip: {
             shared: true
         },
@@ -1811,7 +1819,7 @@
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
             title:{
-                text: "# of Loans Per Loan Range All Industry",
+                text: "# of Loans Per Loan Range",
                 fontFamily: "sans-serif",
                 fontSize: 20,
             },
@@ -2067,7 +2075,7 @@
             animationEnabled: true,
             theme: "light1",
             title:{
-                text: "# of Jobs Retained Per Loan Range All Industry",
+                text: "# of Jobs Retained Per Loan Range",
                 fontFamily: "sans-serif",
                 fontSize: 20,
             },
