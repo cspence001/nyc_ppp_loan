@@ -7,9 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loan Dash</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="../static/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='static/js/logic.js') }}"></script>
   <!-- <script src ="../static/lib/canvasjs.min.js" charset="utf-8"></script> -->
 </head>
 
@@ -19,7 +20,7 @@
       <div class="col-md-12 jumbotron text-center">
         <h1>New York City PPP Loans</h1>
         <a href= "industry.html"><p>Click here to explore the different industries</p></a>
-        <a href= "geo/geoindex.html"><p>Click here for map distribution.</p></a>
+        <a href= "../geo/geoindex.html"><p>Click here for map distribution.</p></a>
       </div>
     </div>
     <div class="row">
@@ -36,7 +37,7 @@
         </div>
       </div> 
       <div class="col-md-10 col align-self-end" style="height:440px;">
-        <table class="table table-striped table-responsive"></table>
+        <table class="table-striped table-responsive"></table>
       </div>
       <div class="col-md-6">
         <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
@@ -81,7 +82,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src="/plotly-challenge/static/js/app.js"></script> link for github pages deploy -->
-  <script src="static/js/logic.js" charset="utf-8"></script> 
+  <script src="../static/js/logic.js" charset="utf-8"></script> 
   <script src="/nyc_ppp_loan/static/js/logic.js"></script> <!-- link for github pages deploy-->
 </body>
 
