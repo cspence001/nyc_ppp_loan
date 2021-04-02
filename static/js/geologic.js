@@ -19,7 +19,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
   // Grab the data with d3
-  d3.csv("data/nycppprecipients_geo.csv").then(function(data){
+  d3.csv("/static/data/geo/nycppprecipients_geo.csv").then(function(data){
     console.log(data);
     // Create a new marker cluster group
     var markers = L.markerClusterGroup();

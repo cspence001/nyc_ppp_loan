@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="static/css/style2.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='static/js/logic20.js') }}"></script>
 </head>
 
 <body>
@@ -20,7 +19,7 @@
       <div class="col-md-12 jumbotron text-center">
         <h1>NYC PPP Loans by Industry</h1>
         <p>Use the dropdown menus below to select and compare the different industries.</p>
-        <a href= "index.html"><p>NYC PPP Loans Home</p></a>
+        <a href= "{{url_for('index')}}"><p>NYC PPP Loans Home</p></a>
         <a href= "geo/geoindex.html"><p>Click here for map distribution.</p></a>
       </div>
     </div>
@@ -106,9 +105,8 @@
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <script src="/plotly-challenge/static/js/app.js"></script> link for github pages deploy -->
-  <script src="static/js/logic20.js" charset="utf-8"></script> <!-- link for local server deploy-->
-  <script src="/static/js/logic20.js"></script>
+  <script src="../static/js/logic20.js" charset="utf-8"></script> <!-- link for local server deploy-->
+  <script src="{{ url_for('static', filename='/js/logic20.js') }}"></script>
 
 </body>
 </html>

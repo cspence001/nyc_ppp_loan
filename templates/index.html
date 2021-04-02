@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../static/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='static/js/logic.js') }}"></script>
   <!-- <script src ="../static/lib/canvasjs.min.js" charset="utf-8"></script> -->
 </head>
 
@@ -19,8 +18,8 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>New York City PPP Loans</h1>
-        <a href= "industry.html"><p>Click here to explore the different industries</p></a>
-        <a href= "../geo/geoindex.html"><p>Click here for map distribution.</p></a>
+        <a href= "{{url_for('industry')}}"><p>Click here to explore the different industries</p></a>
+        <a href="{{url_for('geo')}}"><p>Click here for map distribution.</p></a>
       </div>
     </div>
     <div class="row">
@@ -81,9 +80,10 @@
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <script src="/plotly-challenge/static/js/app.js"></script> link for github pages deploy -->
+
   <script src="../static/js/logic.js" charset="utf-8"></script> 
-  <script src="/static/js/logic.js"></script> <!-- link for github pages deploy-->
+  <script src="{{ url_for('static', filename='/js/logic.js') }}"></script> <!--app.py-->
+  <!-- <script src="nyc_ppp_loan/static/js/logic.js"></script> <!--link for github pages deploy -->
 </body>
 
 </html>
