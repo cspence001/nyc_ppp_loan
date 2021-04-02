@@ -13,7 +13,7 @@ def industry():
     return render_template("industry.html")
 
 @app.route("/geo")
-def industry():
+def geo():
     return render_template("geoindex.html")
 
 if __name__ == "__main__":
