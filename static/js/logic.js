@@ -2350,7 +2350,8 @@
 
         ]
         function tabulate(industryTableData, columns) {
-            var table = d3.select('table').append('table')
+            var table = d3.select('table')
+            // .append('table')
             var thead = table.append('thead')
             var	tbody = table.append('tbody');
 
