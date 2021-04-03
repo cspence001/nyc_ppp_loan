@@ -11,6 +11,17 @@ body {
   margin: 0;
 }
 
+.col-md-2-transparent {
+  background: none;
+}
+
+/* .col-md-2 {
+  opacity:0.6!important;
+} */
+
+.col-md-2 {
+  height: 120px;
+} 
 
 #selDataset {
   width: 120px;

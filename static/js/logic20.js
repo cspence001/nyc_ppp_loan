@@ -2694,17 +2694,17 @@
 
         //industry17 RangeB chart percentages
         // percent of loans industry17 range b out of all loans industry17
-        var ind17LoanPercentB = (((ind16loanRanges_length[1])/ind16jobstotallist.length)* 100)
+        var ind17LoanPercentB = (((ind17loanRanges_length[1])/ind16jobstotallist.length)* 100)
         // percent of loans industry16 loan range b of all loans range b
-        var ind17LoanPercentBofAllinB = (((ind16loanRanges_length[1])/indLoansCountRangeb)* 100); 
+        var ind17LoanPercentBofAllinB = (((ind17loanRanges_length[1])/indLoansCountRangeb)* 100); 
         //percentage of all loans for industry16loanrangeB
-        var ind17LoanPercentBofAllLoans = (((ind16loanRanges_length[1])/indLoansCountRangeTotal)* 100);
+        var ind17LoanPercentBofAllLoans = (((ind17loanRanges_length[1])/indLoansCountRangeTotal)* 100);
         // percent of jobs industry16 range b out of all jobs industry17
-        var ind17JobPercentB = (((ind16jobscount_sum[1])/ind16jobstotal)* 100)
+        var ind17JobPercentB = (((ind17jobscount_sum[1])/ind17jobstotal)* 100)
         // percent of jobs industry16 out of all jobs in loan range
-        var ind17JobPercentBofAllinB = (((ind16jobscount_sum[1])/indJobsCountRangeb)* 100); 
+        var ind17JobPercentBofAllinB = (((ind17jobscount_sum[1])/indJobsCountRangeb)* 100); 
         //percentage of all jobs for industry16jobsrangeB
-        var ind17JobPercentBofAllLoans = (((ind16jobscount_sum[1])/indJobsCountRangeAll)* 100);
+        var ind17JobPercentBofAllLoans = (((ind17jobscount_sum[1])/indJobsCountRangeAll)* 100);
 
         //industry17 RangeC chart percentages
         // percent of loans industry17 range c out of all loans industry17

@@ -23,8 +23,8 @@
   </head>
   <body>
     <div class="container"></div>
-    <dic class="col-md-2"></dic>
-        <div class="well">
+    <div class="col-md-2 align-self-start">
+        <div class="well well-sm">
           <h5>Industry:</h5>
           <!-- dropdown  -->
           <select class="dropdown" id="selDataset">
@@ -50,9 +50,15 @@
             <option value ="ind19">Management of Companies and Enterprises</option>
             <option value ="ind20">Mining</option>
           </select>
-        </div>
+    </div>
+    <div class="well well-sm">
+        <a href= "{{url_for('index')}}"><p>NYC PPP Loans Home</p></a>
+        <a href= "{{url_for('industry')}}"><p>Data by Industry</p></a>
+    </div>
     </div>
 
+
+   
     <div id="map"></div>
 
     <!-- Leaflet JS -->
