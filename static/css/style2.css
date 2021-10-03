@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+#maindesc {
+  margin-top: 26px;
+}
+#maindesc-col{
+  padding-top:20px;
+  padding-bottom:32px;
+  background-color: #eee;
+}
 
 #selDataset {
   width: 120px;
