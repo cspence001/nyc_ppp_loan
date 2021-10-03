@@ -18,62 +18,91 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>New York City PPP Loans</h1>
-        <a href= "{{url_for('industry')}}"><p>Click here to explore the different industries</p></a>
-        <a href="{{url_for('geo')}}"><p>Click here for map distribution.</p></a>
       </div>
-    </div>
+    </div>  
     <div class="row">
-      <div class="col-md-2">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">NYC Loan Totals</h3>
+      <div class="col-md-2" id="well-col">
+          <div class="well well-sm">
+            <a href= "{{url_for('index')}}"><p>NYC PPP Loans Home</p></a>
+            <a href= "{{url_for('industry')}}"><p>Data by Industry</p></a>
+            <a href= "{{url_for('geo')}}"><p>Map distribution</p></a>
           </div>
-          <div id="metadata" class="panel-body">
-          <h5>Total Loans: 17550</h5>
-          <h5>Total Industries: 20</h5>
-          <h5>Total Jobs: 766874 </h5>
+          </div>
+          <div class="col-md-10" id="maindesc-col">
+            <h5 id="maindesc"> The following data is for all NYC PPP Loan recipients at or above $150K as of July 6, 2020. The data was obtained from data.BetaNYC via the Treasury Department and SBA.
+              The source data was used to quantify a breakdown in regards to industry, job retenance, and loan totals in order to qualify and determine efficacy of loan dispersements in 
+              their primary objective to retain jobs and keep businesses afloat during the height of the Covid-19 pandemic during the Spring and Summer of 2020. The original data set can
+             be found <a href="https://data.beta.nyc/dataset/0907b947-a082-46ac-b9f8-d6ef81acae81/resource/84df2d7a-9cf5-49c8-95dd-e300b3bc6b62/download/nycppprecipients.csv">here</a>. </h5>
+          </div>
+          </div>
+      <br>
+      <div class="row">
+        <div class="col-md-2" id="panel-col">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">NYC Loan Totals</h3>
+            </div>
+            <div id="metadata" class="panel-body">
+            <p>Total Loans: 17550</p>
+            <p>Total Industries: 20</p>
+            <p>Total Jobs: 766874 </p>
+            </div>
+          </div>
         </div>
-        </div>
-      </div> 
-      <div class="col-md-10 col align-self-end" style="height:440px;">
+        <div class="col-md-10" id="table-col">
         <table class="table-striped"></table>
+        </div>
       </div>
-      <div class="col-md-6">
-        <div id="chartContainer4" style="height: 300px; width: 100%;"></div>
-        <br>
-        <p>The above chart shows how many total jobs were retained per Loan Range.</p>
-      </div>
-      <br>
-      <div class="col-md-6">
-        <div id="chartContainer5" style="height: 300px; width: 100%;"></div>
-        <br>
-        <p>The above pie chart shows total loans dispensed per Loan Range.</p>
-      </div>
-      <br>
+      <div class="col-md-6" id="desc">
+        <h2>The following charts breakdown the number of loans per loans range by industry.</h2>
     </div>
+      <div class="col-md-6" id="cont6">
+        <h4 id="pdesc">Total # of Loans per Loan Range.</h4>
+        <br>
+        <div id="chartContainer5" style="height: 340px; width: 100%;"></div>
+      </div>
+      <br>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" id="cont12">
+        <h4 id="pdesc">This chart shows the number of loans that were issued for each of the 20 industries as determined by loan range.</h4>
+        <br>
         <div id="chartContainer3" style="height: 500px; width: 100%;"></div>
-        <br>
-        <p>This chart shows the number of loans that were issued for each of the 20 industries as determined by loan range.</p>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" id="cont12">
+        <h4 id="pdesc">This chart shows how many loans were issued in each loan range for each industry.</h4>
+        <br>
         <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      </div>
+    </div>
+    <br>
+    <div class="col-md-6" id="desc">
+      <h2>The following charts breakdown the # of jobs retained per loan range by industry.</h2>
+    </div>
+    <div class="col-md-6" id="cont6">
+      <h4 id="pdesc">Total # number of jobs retained per Loan Range.</h4>
+      <br>
+      <div id="chartContainer4" style="height: 340px; width: 100%;"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12" id="cont12">
+        <h4 id="pdesc">This chart shows the number of jobs retained for each of the 20 industries as determined by loan range.</h4>
         <br>
-        <p>This chart shows how many loans were issued in each loan range. This chart looks at how many loans were issued for all industries.</p>
+        <div id="chartContainer6" style="height: 500px; width: 100%;"></div>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-12">
-        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+      <div class="col-md-12" id ="cont12">
+        <h4 id="pdesc">This chart shows the number of jobs retained in each loan range for each of the 20 industries.</h4>
         <br>
-        <p>The final chart shows the number of jobs retained in each loan range. It is an overall look at all industries.</p>
+        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
       </div>
     </div>
+    <br>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>   

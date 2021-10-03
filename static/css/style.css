@@ -5,46 +5,94 @@ body{
   margin: 0;
 }
 
-.h5 {
-  margin-left: 10px;
-  margin-right: 5px;
-  padding-left: 5px;
+#maindesc {
+  margin-top: 26px;
 }
+#maindesc-col{
+  padding-top:20px;
+  padding-bottom:32px;
+  background-color: #eee;
+}
+
+#pdesc {
+  background-color: #fff;
+  text-align: center;
+  padding: 2px 2px 2px 2px;
+}
+
 .panel-body {
   padding-left: 5px;
 }
-p {
-  font-size: 30px;
-  font-weight: bold;
+
+.panel-primary {
+margin-top: 3025x;
+height: 150px;
 }
 
+/* p {
+background-color: #fff;
+text-align: center;
+} */
 
+#well-col{
+  padding-top: 20px;
+  height: 150px;
+  background-color: rgba(0,0,0,.25);
+} 
+
+#panel-col{
+  padding-top: 20px;
+  height: 190px;
+  background-color: rgba(0,0,0,.25);
+} 
+
+#desc {
+  margin-top: 105px;
+  padding-top: 20px;
+  height: 180px;
+  background-color: #eee;
+} 
+#cont6 {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 100%;
+  background-color: rgba(0,0,0,.25);
+} 
 /*700px width for example*/
+
+#cont12{
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  height: 100%;
+  background-color: rgba(0,0,0,.25);
+} 
 
 #selDataset2 option {
   width: 700px; 
   height: 60px; }
 
-tr:nth-child(5n+1) {background:#fff;}
-tr:nth-child(5n+2) {background:#eee;}
-tr:nth-child(5n+3) {background:#ddd;}
-tr:nth-child(5n+4) {background:#ccc;}
-tr:nth-child(5n+0) {background:#bbb;}
+tr:nth-child(2n+1) {background:#fff;}
+tr:nth-child(2n) {background:#eee;}
 
-.col-md-10 {
-  padding-top:10px;
-  padding-bottom:40px;
-
+.table-striped {
+  background-color: #eee;
+  padding-top: 20px;
 }
-
-.col-md-6 {
-  padding-top:40px;
-  padding-bottom:30px;
-
+.table-striped td {
+  padding: 0 15px;
 }
-
-.col-md-12 {
+.table-striped th {
+  padding: 0 15px;
+}
+#table-col{
   padding-top:20px;
   padding-bottom:20px;
-
+  background-color: #eee;
 }
+

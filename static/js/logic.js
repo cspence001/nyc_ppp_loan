@@ -1602,11 +1602,11 @@
             theme: "light1",
             exportEnabled: true,
             animationEnabled: true,
-            title:{
-                text: "# Jobs Retained Per Loan Range All Industry",
-                fontFamily: "sans-serif",
-                fontSize: 20,
-            },
+            // title:{
+            //     text: "# Jobs Retained Per Loan Range All Industry",
+            //     fontFamily: "sans-serif",
+            //     fontSize: 20,
+            // },
             data: [{
                 type: "doughnut",
                 startAngle: 25,
@@ -1631,11 +1631,11 @@
         theme: "light1", // "light1", "light2", "dark1", "dark2"
         exportEnabled: true,
         animationEnabled: true,
-        title: {
-            text: "# Loans Per Loan Range All Industry",
-            fontFamily: "sans-serif",
-            fontSize: 20,
-        },
+        // title: {
+        //     text: "# Loans Per Loan Range All Industry",
+        //     fontFamily: "sans-serif",
+        //     fontSize: 20,
+        // },
         data: [{
             type: "pie",
             startAngle: 25,
@@ -1659,11 +1659,11 @@
      var chart = new CanvasJS.Chart("chartContainer3", {
         animationEnabled: true,
         theme: "light1",
-        title:{
-            text: "# of Loans Per Industry Each Range",
-            fontFamily: "sans-serif",
-            fontSize: 20,
-        },
+        // title:{
+        //     text: "# of Loans Per Industry Each Range",
+        //     fontFamily: "sans-serif",
+        //     fontSize: 20,
+        // },
         axisY:{
             labelFontSize: 12,
           },
@@ -1817,11 +1817,11 @@
         // stackedbar1
         var chart = new CanvasJS.Chart("chartContainer", {
             animationEnabled: true,
-            title:{
-                text: "# of Loans Per Loan Range",
-                fontFamily: "sans-serif",
-                fontSize: 20,
-            },
+            // title:{
+            //     text: "# of Loans Per Loan Range",
+            //     fontFamily: "sans-serif",
+            //     fontSize: 20,
+            // },
             toolTip: {
                 shared: true
             },
@@ -2073,11 +2073,11 @@
         var chart = new CanvasJS.Chart("chartContainer2", {
             animationEnabled: true,
             theme: "light1",
-            title:{
-                text: "# of Jobs Retained Per Loan Range",
-                fontFamily: "sans-serif",
-                fontSize: 20,
-            },
+            // title:{
+            //     text: "# of Jobs Retained Per Loan Range",
+            //     fontFamily: "sans-serif",
+            //     fontSize: 20,
+            // },
             toolTip: {
                 shared: true
             },
@@ -2324,6 +2324,167 @@
         ]
         });
         chart.render();
+
+             //stackedbar6
+     var chart = new CanvasJS.Chart("chartContainer6", {
+        animationEnabled: true,
+        theme: "light1",
+        // title:{
+        //     text: "# Jobs Retained Per Industry Each Range",
+        //     fontFamily: "sans-serif",
+        //     fontSize: 20,
+        // },
+        axisY:{
+            labelFontSize: 12,
+          },
+        axisX:{
+            labelFontSize: 12,
+            interval: 1,
+            reversed:  true
+          },
+        toolTip: {
+            shared: true
+        },
+        data: [{
+            type: "stackedBar",
+            name: LoanRanges[0],
+            showInLegend: "true",
+            dataPoints: [
+                { label: industrylist[0], y: ind1jobscount_sum[0]},
+                { label: industrylist[1], y: ind2jobscount_sum[0]},
+                { label: industrylist[2], y: ind3jobscount_sum[0]},
+                { label: industrylist[3], y: ind4jobscount_sum[0]},
+                { label: industrylist[4], y: ind5jobscount_sum[0]},
+                { label: industrylist[5], y: ind6jobscount_sum[0]},
+                { label: industrylist[6], y: ind7jobscount_sum[0]},
+                { label: industrylist[7], y: ind8jobscount_sum[0]},
+                { label: industrylist[8], y: ind9jobscount_sum[0]},
+                { label: industrylist[9], y: ind10jobscount_sum[0]},
+                { label: industrylist[10], y: ind11jobscount_sum[0]},
+                { label: industrylist[11], y: ind12jobscount_sum[0]},
+                { label: industrylist[12], y: ind13jobscount_sum[0]},
+                { label: industrylist[13], y: ind14jobscount_sum[0]},
+                { label: industrylist[14], y: ind15jobscount_sum[0]},
+                { label: industrylist[15], y: ind16jobscount_sum[0]},
+                { label: industrylist[16], y: ind17jobscount_sum[0]},
+                { label: industrylist[17], y: ind18jobscount_sum[0]},
+                { label: industrylist[18], y: ind19jobscount_sum[0]},
+                { label: industrylist[19], y: ind20jobscount_sum[0]},
+            ]
+        },
+        {
+            type: "stackedBar",
+            name: LoanRanges[1],
+            showInLegend: "true",
+            dataPoints: [
+                { label: industrylist[0], y: ind1jobscount_sum[1]},
+                { label: industrylist[1], y: ind2jobscount_sum[1]},
+                { label: industrylist[2], y: ind3jobscount_sum[1]},
+                { label: industrylist[3], y: ind4jobscount_sum[1]},
+                { label: industrylist[4], y: ind5jobscount_sum[1]},
+                { label: industrylist[5], y: ind6jobscount_sum[1]},
+                { label: industrylist[6], y: ind7jobscount_sum[1]},
+                { label: industrylist[7], y: ind8jobscount_sum[1]},
+                { label: industrylist[8], y: ind9jobscount_sum[1]},
+                { label: industrylist[9], y: ind10jobscount_sum[1]},
+                { label: industrylist[10], y: ind11jobscount_sum[1]},
+                { label: industrylist[11], y: ind12jobscount_sum[1]},
+                { label: industrylist[12], y: ind13jobscount_sum[1]},
+                { label: industrylist[13], y: ind14jobscount_sum[1]},
+                { label: industrylist[14], y: ind15jobscount_sum[1]},
+                { label: industrylist[15], y: ind16jobscount_sum[1]},
+                { label: industrylist[16], y: ind17jobscount_sum[1]},
+                { label: industrylist[17], y: ind18jobscount_sum[1]},
+                { label: industrylist[18], y: ind19jobscount_sum[1]},
+                { label: industrylist[19], y: ind20jobscount_sum[1]},
+            ]
+        },
+        {
+            type: "stackedBar",
+            name: LoanRanges[2],
+            showInLegend: "true",
+            dataPoints: [
+                { label: industrylist[0], y: ind1jobscount_sum[2]},
+                { label: industrylist[1], y: ind2jobscount_sum[2]},
+                { label: industrylist[2], y: ind3jobscount_sum[2]},
+                { label: industrylist[3], y: ind4jobscount_sum[2]},
+                { label: industrylist[4], y: ind5jobscount_sum[2]},
+                { label: industrylist[5], y: ind6jobscount_sum[2]},
+                { label: industrylist[6], y: ind7jobscount_sum[2]},
+                { label: industrylist[7], y: ind8jobscount_sum[2]},
+                { label: industrylist[8], y: ind9jobscount_sum[2]},
+                { label: industrylist[9], y: ind10jobscount_sum[2]},
+                { label: industrylist[10], y: ind11jobscount_sum[2]},
+                { label: industrylist[11], y: ind12jobscount_sum[2]},
+                { label: industrylist[12], y: ind13jobscount_sum[2]},
+                { label: industrylist[13], y: ind14jobscount_sum[2]},
+                { label: industrylist[14], y: ind15jobscount_sum[2]},
+                { label: industrylist[15], y: ind16jobscount_sum[2]},
+                { label: industrylist[16], y: ind17jobscount_sum[2]},
+                { label: industrylist[17], y: ind18jobscount_sum[2]},
+                { label: industrylist[18], y: ind19jobscount_sum[2]},
+                { label: industrylist[19], y: ind20jobscount_sum[2]},
+            ]
+        },
+        {
+            type: "stackedBar",
+            name: LoanRanges[3],
+            showInLegend: "true",
+            dataPoints: [
+                { label: industrylist[0], y: ind1jobscount_sum[3]},
+                { label: industrylist[1], y: ind2jobscount_sum[3]},
+                { label: industrylist[2], y: ind3jobscount_sum[3]},
+                { label: industrylist[3], y: ind4jobscount_sum[3]},
+                { label: industrylist[4], y: ind5jobscount_sum[3]},
+                { label: industrylist[5], y: ind6jobscount_sum[3]},
+                { label: industrylist[6], y: ind7jobscount_sum[3]},
+                { label: industrylist[7], y: ind8jobscount_sum[3]},
+                { label: industrylist[8], y: ind9jobscount_sum[3]},
+                { label: industrylist[9], y: ind10jobscount_sum[3]},
+                { label: industrylist[10], y: ind11jobscount_sum[3]},
+                { label: industrylist[11], y: ind12jobscount_sum[3]},
+                { label: industrylist[12], y: ind13jobscount_sum[3]},
+                { label: industrylist[13], y: ind14jobscount_sum[3]},
+                { label: industrylist[14], y: ind15jobscount_sum[3]},
+                { label: industrylist[15], y: ind16jobscount_sum[3]},
+                { label: industrylist[16], y: ind17jobscount_sum[3]},
+                { label: industrylist[17], y: ind18jobscount_sum[3]},
+                { label: industrylist[18], y: ind19jobscount_sum[3]},
+                { label: industrylist[19], y: ind20jobscount_sum[3]},
+            ]
+        },
+        {
+            type: "stackedBar",
+            name: LoanRanges[4],
+            showInLegend: "true",
+            dataPoints: [
+                { label: industrylist[0], y: ind1jobscount_sum[4]},
+                { label: industrylist[1], y: ind2jobscount_sum[4]},
+                { label: industrylist[2], y: ind3jobscount_sum[4]},
+                { label: industrylist[3], y: ind4jobscount_sum[4]},
+                { label: industrylist[4], y: ind5jobscount_sum[4]},
+                { label: industrylist[5], y: ind6jobscount_sum[4]},
+                { label: industrylist[6], y: ind7jobscount_sum[4]},
+                { label: industrylist[7], y: ind8jobscount_sum[4]},
+                { label: industrylist[8], y: ind9jobscount_sum[4]},
+                { label: industrylist[9], y: ind10jobscount_sum[4]},
+                { label: industrylist[10], y: ind11jobscount_sum[4]},
+                { label: industrylist[11], y: ind12jobscount_sum[4]},
+                { label: industrylist[12], y: ind13jobscount_sum[4]},
+                { label: industrylist[13], y: ind14jobscount_sum[4]},
+                { label: industrylist[14], y: ind15jobscount_sum[4]},
+                { label: industrylist[15], y: ind16jobscount_sum[4]},
+                { label: industrylist[16], y: ind17jobscount_sum[4]},
+                { label: industrylist[17], y: ind18jobscount_sum[4]},
+                { label: industrylist[18], y: ind19jobscount_sum[4]},
+                { label: industrylist[19], y: ind20jobscount_sum[4]},
+            ]
+        },
+    ]
+    });
+    chart.render();   
+
+    
     
 
         var industryTableData = [
