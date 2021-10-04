@@ -1496,6 +1496,27 @@
         var ind20jobscount = [ind20jobsa, ind20jobsb, ind20jobsc, ind20jobsd, ind20jobse];
         var ind20jobscount_sum = ind20jobscount.map((item) =>math.sum(item));
 
+        // avg # jobs retained per loan by industry
+        ind1AvgJobsPerLoan = (ind1jobstotal/ind1loanslistAll.length)
+        ind2AvgJobsPerLoan = (ind2jobstotal/ind2loanslistAll.length)
+        ind3AvgJobsPerLoan = (ind3jobstotal/ind3loanslistAll.length)
+        ind4AvgJobsPerLoan = (ind4jobstotal/ind4loanslistAll.length)
+        ind5AvgJobsPerLoan = (ind5jobstotal/ind5loanslistAll.length)
+        ind6AvgJobsPerLoan = (ind6jobstotal/ind6loanslistAll.length)
+        ind7AvgJobsPerLoan = (ind7jobstotal/ind7loanslistAll.length)
+        ind8AvgJobsPerLoan = (ind8jobstotal/ind8loanslistAll.length)
+        ind9AvgJobsPerLoan = (ind9jobstotal/ind9loanslistAll.length)
+        ind10AvgJobsPerLoan = (ind10jobstotal/ind10loanslistAll.length)
+        ind11AvgJobsPerLoan = (ind11jobstotal/ind11loanslistAll.length)
+        ind12AvgJobsPerLoan = (ind12jobstotal/ind12loanslistAll.length)
+        ind13AvgJobsPerLoan = (ind13jobstotal/ind13loanslistAll.length)
+        ind14AvgJobsPerLoan = (ind14jobstotal/ind14loanslistAll.length)
+        ind15AvgJobsPerLoan = (ind15jobstotal/ind15loanslistAll.length)
+        ind16AvgJobsPerLoan = (ind16jobstotal/ind16loanslistAll.length)
+        ind17AvgJobsPerLoan = (ind17jobstotal/ind17loanslistAll.length)
+        ind18AvgJobsPerLoan = (ind18jobstotal/ind18loanslistAll.length)
+        ind19AvgJobsPerLoan = (ind19jobstotal/ind19loanslistAll.length)
+        ind20AvgJobsPerLoan = (ind20jobstotal/ind20loanslistAll.length)
 
 
          //adds all Jobs Retained from Loan range a 
@@ -2488,26 +2509,26 @@
     
 
         var industryTableData = [
-            {"Industry" : (industrylist[0]), "# of Loans" : (ind1loanslistAll.length), "% of Total" : (ind1loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind1jobstotal), "% of Total Jobs" : (ind1JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[1]), "# of Loans" : (ind2loanslistAll.length), "% of Total" : (ind2loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind2jobstotal), "% of Total Jobs" : (ind2JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[2]), "# of Loans" : (ind3loanslistAll.length), "% of Total" : (ind3loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind3jobstotal), "% of Total Jobs" : (ind3JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[3]), "# of Loans" : (ind4loanslistAll.length), "% of Total" : (ind4loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind4jobstotal), "% of Total Jobs" : (ind4JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[4]), "# of Loans" : (ind5loanslistAll.length), "% of Total" : (ind5loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind5jobstotal), "% of Total Jobs" : (ind5JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[5]), "# of Loans" : (ind6loanslistAll.length), "% of Total" : (ind6loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind6jobstotal), "% of Total Jobs" : (ind6JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[6]), "# of Loans" : (ind7loanslistAll.length), "% of Total" : (ind7loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind7jobstotal), "% of Total Jobs" : (ind7JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[7]), "# of Loans" : (ind8loanslistAll.length), "% of Total" : (ind8loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind8jobstotal), "% of Total Jobs" : (ind8JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[8]), "# of Loans" : (ind9loanslistAll.length), "% of Total" : (ind9loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind9jobstotal), "% of Total Jobs" : (ind9JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[9]), "# of Loans" : (ind10loanslistAll.length), "% of Total" : (ind10loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind10jobstotal), "% of Total Jobs" : (ind10JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[10]), "# of Loans" : (ind11loanslistAll.length), "% of Total" : (ind11loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind11jobstotal), "% of Total Jobs" : (ind11JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[11]), "# of Loans" : (ind12loanslistAll.length), "% of Total" : (ind12loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind12jobstotal), "% of Total Jobs" : (ind12JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[12]), "# of Loans" : (ind13loanslistAll.length), "% of Total" : (ind13loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind13jobstotal), "% of Total Jobs" : (ind13JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[13]), "# of Loans" : (ind14loanslistAll.length), "% of Total" : (ind14loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind14jobstotal), "% of Total Jobs" : (ind14JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[14]), "# of Loans" : (ind15loanslistAll.length), "% of Total" : (ind15loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind15jobstotal), "% of Total Jobs" : (ind15JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[15]), "# of Loans" : (ind16loanslistAll.length), "% of Total" : (ind16loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind16jobstotal), "% of Total Jobs" : (ind16JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[16]), "# of Loans" : (ind17loanslistAll.length), "% of Total" : (ind17loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind17jobstotal), "% of Total Jobs" : (ind17JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[17]), "# of Loans" : (ind18loanslistAll.length), "% of Total" : (ind18loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind18jobstotal), "% of Total Jobs" : (ind18JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[18]), "# of Loans" : (ind19loanslistAll.length), "% of Total" : (ind19loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind19jobstotal), "% of Total Jobs" : (ind19JobsPercent.toFixed(2))},
-            {"Industry" : (industrylist[19]), "# of Loans" : (ind20loanslistAll.length), "% of Total" : (ind20loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind20jobstotal), "% of Total Jobs" : (ind20JobsPercent.toFixed(2))},
+            {"Industry" : (industrylist[0]), "# of Loans" : (ind1loanslistAll.length), "% of Total" : (ind1loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind1jobstotal), "% of Total Jobs" : (ind1JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind1AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[1]), "# of Loans" : (ind2loanslistAll.length), "% of Total" : (ind2loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind2jobstotal), "% of Total Jobs" : (ind2JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind2AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[2]), "# of Loans" : (ind3loanslistAll.length), "% of Total" : (ind3loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind3jobstotal), "% of Total Jobs" : (ind3JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind3AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[3]), "# of Loans" : (ind4loanslistAll.length), "% of Total" : (ind4loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind4jobstotal), "% of Total Jobs" : (ind4JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind4AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[4]), "# of Loans" : (ind5loanslistAll.length), "% of Total" : (ind5loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind5jobstotal), "% of Total Jobs" : (ind5JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind5AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[5]), "# of Loans" : (ind6loanslistAll.length), "% of Total" : (ind6loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind6jobstotal), "% of Total Jobs" : (ind6JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind6AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[6]), "# of Loans" : (ind7loanslistAll.length), "% of Total" : (ind7loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind7jobstotal), "% of Total Jobs" : (ind7JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind7AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[7]), "# of Loans" : (ind8loanslistAll.length), "% of Total" : (ind8loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind8jobstotal), "% of Total Jobs" : (ind8JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind8AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[8]), "# of Loans" : (ind9loanslistAll.length), "% of Total" : (ind9loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind9jobstotal), "% of Total Jobs" : (ind9JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind9AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[9]), "# of Loans" : (ind10loanslistAll.length), "% of Total" : (ind10loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind10jobstotal), "% of Total Jobs" : (ind10JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind10AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[10]), "# of Loans" : (ind11loanslistAll.length), "% of Total" : (ind11loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind11jobstotal), "% of Total Jobs" : (ind11JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind11AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[11]), "# of Loans" : (ind12loanslistAll.length), "% of Total" : (ind12loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind12jobstotal), "% of Total Jobs" : (ind12JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind12AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[12]), "# of Loans" : (ind13loanslistAll.length), "% of Total" : (ind13loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind13jobstotal), "% of Total Jobs" : (ind13JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind13AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[13]), "# of Loans" : (ind14loanslistAll.length), "% of Total" : (ind14loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind14jobstotal), "% of Total Jobs" : (ind14JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind14AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[14]), "# of Loans" : (ind15loanslistAll.length), "% of Total" : (ind15loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind15jobstotal), "% of Total Jobs" : (ind15JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind15AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[15]), "# of Loans" : (ind16loanslistAll.length), "% of Total" : (ind16loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind16jobstotal), "% of Total Jobs" : (ind16JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind16AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[16]), "# of Loans" : (ind17loanslistAll.length), "% of Total" : (ind17loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind17jobstotal), "% of Total Jobs" : (ind17JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind17AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[17]), "# of Loans" : (ind18loanslistAll.length), "% of Total" : (ind18loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind18jobstotal), "% of Total Jobs" : (ind18JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind18AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[18]), "# of Loans" : (ind19loanslistAll.length), "% of Total" : (ind19loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind19jobstotal), "% of Total Jobs" : (ind19JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind19AvgJobsPerLoan.toFixed(2))},
+            {"Industry" : (industrylist[19]), "# of Loans" : (ind20loanslistAll.length), "% of Total" : (ind20loansPercentofTotal.toFixed(2)), "# of Jobs" : (ind20jobstotal), "% of Total Jobs" : (ind20JobsPercent.toFixed(2)), "Avg # of Jobs per Loan" : (ind20AvgJobsPerLoan.toFixed(2))},
 
         ]
         function tabulate(industryTableData, columns) {
@@ -2544,7 +2565,7 @@
         }
 
         // render the tables
-        tabulate(industryTableData, ['Industry', '# of Loans', '% of Total', '# of Jobs', '% of Total Jobs']); // 2 column table
+        tabulate(industryTableData, ['Industry', '# of Loans', '% of Total', '# of Jobs', '% of Total Jobs', 'Avg # of Jobs per Loan']); // 6 column table
 
 });
 // "Accomodation and Food Services", 
