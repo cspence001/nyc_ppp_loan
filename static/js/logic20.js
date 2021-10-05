@@ -3521,12 +3521,6 @@
             chart4.render();
         });
 
-
-        ind1loanRangeaJobsAvg 
-        ind1loanRangebJobsAvg 
-        ind1loanRangecJobsAvg 
-        ind1loanRangedJobsAvg 
-        ind1loanRangeeJobsAvg 
         
         var ind1TableData = [
             {"Industry" : (industrylist[0]), "Loan Range" : (LoanRanges[0]), "# of Loans" : (ind1loanRanges_length[0]), "% of Loans Industry" : (ind1LoanPercentA.toFixed(2)), "% of Loan Range All Industry in Range" : (ind1LoanPercentAofAllinA.toFixed(2)), "% of All Loans": (ind1LoanPercentAofAllLoans.toFixed(2)), "# of Jobs Retained": (ind1jobscount_sum[0]), "% of Jobs Retained Industry" : (ind1JobPercentA.toFixed(2)), "% of Jobs Retained All Industry in Range" : (ind1JobPercentAofAllinA.toFixed(2)), "% of All Jobs Retained" : (ind1JobPercentAofAllLoans.toFixed(2)), "Avg # of Jobs Retained per Loan" : (ind1loanRangeaJobsAvg.toFixed(2))},
