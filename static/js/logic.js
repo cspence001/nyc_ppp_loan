@@ -393,10 +393,12 @@
 
     var totalJobsAllIndustry = [];
 
+    let count = 0;
+
     for (var i=0; i<infos.length; i++) {
         var subArrays = infos[i];
         console.log(subArrays);
-
+            count+= subArrays.length; 
             for (var j = 0; j <subArrays.length; j++) {
                 
                 let loanRangea = "a $5-10 million";
@@ -1100,7 +1102,7 @@
          // case "ind6":
         // if (selection == "Construction") {
         var ind6loanslistAll =ind6loanslist
-        var ind6BusinessNameslist = ind5loansNamelist;
+        var ind6BusinessNameslist = ind6loansNamelist;
         //list of job counts for each loan for ind6   
         var ind6jobstotallist = ind6jobslist;
         //sum of jobs counts for all loans for ind6
@@ -1166,7 +1168,7 @@
         //sum of jobs counts for all loans for ind10
         var ind10jobstotal = ind10jobssum;
         //array with number of loans for each loan range for ind10
-        var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind9loanse];
+        var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind10loanse];
         console.log(ind10loanRanges)
         var ind10loanRanges_length = ind10loanRanges.map(item => item.length);
         console.log(ind10loanRanges_length);
@@ -1256,7 +1258,7 @@
          // case "ind16":
         // if (selection == "Public Administration") {
         var ind16loanslistAll =ind16loanslist
-        var ind16BusinessNameslist = ind5loansNamelist;
+        var ind16BusinessNameslist = ind16loansNamelist;
         //list of job counts for each loan for ind16   
         var ind16jobstotallist = ind16jobslist;
         //sum of jobs counts for all loans for ind16
