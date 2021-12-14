@@ -13,6 +13,6 @@ Techniques and Processes used to extrapolate data fields for relevant display of
 Dashboard Application:<br>
 *Process of raw value computation in-script application to process fields for industry chart and table display of loan applicant information. Quantitative data review provided in table display using aggregate computation accordant to each industry. <br>
 <br>
-<a href="https://nyc-ppp-loans.herokuapp.com/">application</a>
-<a href="https://github.com/cspence001/nyc_ppp_loan/blob/main/project_docs/Project%202%20Proposal.pdf">proposal</a>
+<a href="https://nyc-ppp-loans.herokuapp.com/">application</a><br>
+<a href="https://github.com/cspence001/nyc_ppp_loan/blob/main/project_docs/Project%202%20Proposal.pdf">proposal</a><br>
 <a href="https://github.com/cspence001/nyc_ppp_loan/blob/main/project_docs/LoanProject_PPT.pptx">process presentation</a>
