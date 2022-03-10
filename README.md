@@ -1,6 +1,6 @@
 # nyc_ppp_loan
 
-NYC PPP loan project is an application discovery process intended for puposes of extrapolated data review in regards to PPP loan recipients with businesses based in NYC. 
+NYC PPP loan project is an application discovery process intended for purposes of research and review of data made public in regards to PPP loan recipients with businesses based in NYC.
 The application covers 17,550 recipients of PPP loans at or above the amount of $150K as of July 6, 2020. <br>
 <br>
 About the dataset:<br>
