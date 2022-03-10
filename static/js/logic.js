@@ -3,7 +3,7 @@
 //     d3.csv("data/output/nycppprecipients_ind.csv").then((data)=>{
 
     d3.csv("/static/data/output/nycppprecipients_ind.csv").then((data)=> {
-        console.log(data);
+
     const groups = data.reduce((groups, info) => {
         const industry = info.Industry;
         if (!groups[industry]) {
@@ -20,15 +20,13 @@
     });
     var industries = [];
     var infos = [];
-    console.log(groupArrays);
         for (var i=0; i <groupArrays.length; i++) { 
 
         industries.push(groupArrays[i].industry);
         infos.push(groupArrays[i].info);
 
         };
-    console.log(industries); //array of all industries (names)
-    console.log(infos);//list of arrays with info for each loan in each industry
+
     // var indjobs1list = 0;
     //Accomodation and Food Services
     var ind1loanslist = [];
@@ -397,7 +395,7 @@
 
     for (var i=0; i<infos.length; i++) {
         var subArrays = infos[i];
-        console.log(subArrays);
+        //console.log(subArrays);
             count+= subArrays.length; 
             for (var j = 0; j <subArrays.length; j++) {
                 
@@ -991,50 +989,31 @@
                 }
     }
     }
-
-            console.log(totalJobsAllIndustry);
             
-        // //Accomodation and Food Services
-            // console.log(ind1loanslist)
-            // console.log(ind1loansNamelist)
-            // console.log(ind1jobslist)
-            // console.log(ind1jobssum);
-
-            // console.log(ind1loansa)
-            // console.log(ind1loansb)
-            // console.log(ind1loansc)
-            // console.log(ind1loansd)
-            // console.log(ind1loanse)
-
-            // console.log(ind1jobsa)
-            // console.log(ind1jobsb)
-            // console.log(ind1jobsc)
-            // console.log(ind1jobsd)
-            // console.log(ind1jobse)
 
 
-// switch(dataset) {
-//     case "ind1":
+
+
     // if (selection == "Accomodation and Food Services") {
         var ind1loanslistAll =ind1loanslist
-        console.log(ind1loanslistAll);
+        //console.log(ind1loanslistAll);
         var ind1BusinessNameslist = ind1loansNamelist;
-        console.log(ind1BusinessNameslist);
+        //console.log(ind1BusinessNameslist);
         //list of jobs counts for each loan for ind1
         var ind1jobstotallist = ind1jobslist;
-        console.log(ind1jobstotallist.length);
+        //console.log(ind1jobstotallist.length);
         //sum of jobs counts for all loans for ind1
         var ind1jobstotal = ind1jobssum; //sum # jobs for All Loans in Industry
-        console.log(ind1jobstotal);
+        //console.log(ind1jobstotal);
         //array with number of loans for each loan range for ind1
         var ind1loanRanges =  [ind1loansa, ind1loansb, ind1loansc, ind1loansd, ind1loanse];
         var ind1loanRanges_length = ind1loanRanges.map(item => item.length); //number loans each loan range 
-        console.log(ind1loanRanges_length);
+        //console.log(ind1loanRanges_length);
         //array with list of jobs for each loan range for ind1
         var ind1jobscount = [ind1jobsa, ind1jobsb, ind1jobsc, ind1jobsd, ind1jobse];
         //array with sum of jobs for each range in ind1
         var ind1jobscount_sum = ind1jobscount.map((item) =>math.sum(item)); //sum # Jobs Retained each loan range
-        console.log(ind1jobscount_sum);
+        //console.log(ind1jobscount_sum);
 
     // case "ind2":
     // if (selection == "Educational Services") {
@@ -1169,9 +1148,7 @@
         var ind10jobstotal = ind10jobssum;
         //array with number of loans for each loan range for ind10
         var ind10loanRanges =  [ind10loansa, ind10loansb, ind10loansc, ind10loansd, ind10loanse];
-        console.log(ind10loanRanges)
         var ind10loanRanges_length = ind10loanRanges.map(item => item.length);
-        console.log(ind10loanRanges_length);
         //array with total number of jobs for each loan range for ind10
         var ind10jobscount = [ind10jobsa, ind10jobsb, ind10jobsc, ind10jobsd, ind10jobse];
         var ind10jobscount_sum = ind10jobscount.map((item) =>math.sum(item));
@@ -1326,7 +1303,6 @@
         //array with number of loans for each loan range for ind20
         var ind20loanRanges =  [ind20loansa, ind20loansb, ind20loansc, ind20loansd, ind20loanse];
         var ind20loanRanges_length = ind20loanRanges.map(item => item.length);
-        console.log(ind20loanRanges_length);
         //array with total number of jobs for each loan range for ind20
         var ind20jobscount = [ind20jobsa, ind20jobsb, ind20jobsc, ind20jobsd, ind20jobse];
         var ind20jobscount_sum = ind20jobscount.map((item) =>math.sum(item));
@@ -1372,7 +1348,6 @@
 
         //total # of Jobs ALL
         var indJobsCountRangeAll = (indJobsCountRangea + indJobsCountRangeb + indJobsCountRangec + indJobsCountRanged + indJobsCountRangee)
-        console.log(indJobsCountRangeAll);
 
         var ind1JobsPercent = ((ind1jobstotal/indJobsCountRangeAll)* 100)
         var ind2JobsPercent = ((ind2jobstotal/indJobsCountRangeAll)* 100)
@@ -1404,43 +1379,42 @@
         
         //adds all Loans from Loan range a 
         var indLoansCountRangea = (ind1loanRanges_length[0] + ind2loanRanges_length[0] + ind3loanRanges_length[0] + ind4loanRanges_length[0] + ind5loanRanges_length[0] + ind6loanRanges_length[0] + ind7loanRanges_length[0] + ind8loanRanges_length[0] + ind9loanRanges_length[0] + ind10loanRanges_length[0] + ind11loanRanges_length[0] + ind12loanRanges_length[0] + ind13loanRanges_length[0] + ind14loanRanges_length[0] + ind15loanRanges_length[0] + ind16loanRanges_length[0] + ind17loanRanges_length[0] + ind18loanRanges_length[0] + ind19loanRanges_length[0] + ind20loanRanges_length[0])
-        console.log(indLoansCountRangea) // 226
+        // 226
         //adds all Loans from Loan range b
         var indLoansCountRangeb = (ind1loanRanges_length[1] + ind2loanRanges_length[1] + ind3loanRanges_length[1] + ind4loanRanges_length[1] + ind5loanRanges_length[1] + ind6loanRanges_length[1] + ind7loanRanges_length[1] + ind8loanRanges_length[1] + ind9loanRanges_length[1] + ind10loanRanges_length[1] + ind11loanRanges_length[1] + ind12loanRanges_length[1] + ind13loanRanges_length[1] + ind14loanRanges_length[1] + ind15loanRanges_length[1] + ind16loanRanges_length[1] + ind17loanRanges_length[1] + ind18loanRanges_length[1] + ind19loanRanges_length[1] + ind20loanRanges_length[1])
-        console.log(indLoansCountRangeb) //875
+        //875
         //adds all Loans from Loan range c
         var indLoansCountRangec = (ind1loanRanges_length[2] + ind2loanRanges_length[2] + ind3loanRanges_length[2] + ind4loanRanges_length[2] + ind5loanRanges_length[2] + ind6loanRanges_length[2] + ind7loanRanges_length[2] + ind8loanRanges_length[2] + ind9loanRanges_length[2] + ind10loanRanges_length[2] + ind11loanRanges_length[2] + ind12loanRanges_length[2] + ind13loanRanges_length[2] + ind14loanRanges_length[2] + ind15loanRanges_length[2] + ind16loanRanges_length[2] + ind17loanRanges_length[2] + ind18loanRanges_length[2] + ind19loanRanges_length[2] + ind20loanRanges_length[2])
-        console.log(indLoansCountRangec) //1710
+        //1710
         //adds all Loans from Loan range d 
         var indLoansCountRanged = (ind1loanRanges_length[3] + ind2loanRanges_length[3] + ind3loanRanges_length[3] + ind4loanRanges_length[3] + ind5loanRanges_length[3] + ind6loanRanges_length[3] + ind7loanRanges_length[3] + ind8loanRanges_length[3] + ind9loanRanges_length[3] + ind10loanRanges_length[3] + ind11loanRanges_length[3] + ind12loanRanges_length[3] + ind13loanRanges_length[3] + ind14loanRanges_length[3] + ind15loanRanges_length[3] + ind16loanRanges_length[3] + ind17loanRanges_length[3] + ind18loanRanges_length[3] + ind19loanRanges_length[3] + ind20loanRanges_length[3])
-        console.log(indLoansCountRanged) //5514
+        //5514
         //adds all Loans from Loan range e
         var indLoansCountRangee = (ind1loanRanges_length[4] + ind2loanRanges_length[4] + ind3loanRanges_length[4] + ind4loanRanges_length[4] + ind5loanRanges_length[4] + ind6loanRanges_length[4] + ind7loanRanges_length[4] + ind8loanRanges_length[4] + ind9loanRanges_length[4] + ind10loanRanges_length[4] + ind11loanRanges_length[4] + ind12loanRanges_length[4] + ind13loanRanges_length[4] + ind14loanRanges_length[4] + ind15loanRanges_length[4] + ind16loanRanges_length[4] + ind17loanRanges_length[4] + ind18loanRanges_length[4] + ind19loanRanges_length[4] + ind20loanRanges_length[4])
-        console.log(indLoansCountRangee) // 9331
+        // 9331
         // total 17656 //incorrect
 
         //total loans
         var indLoansCountRangeTotal = (indLoansCountRangea + indLoansCountRangeb + indLoansCountRangec + indLoansCountRanged + indLoansCountRangee)
-        console.log(indLoansCountRangeTotal); //17656 // incorrect 
+        //17656 // 
         // a loans percentage
         var loanPercentRangeA = ((indLoansCountRangea/indLoansCountRangeTotal)* 100)
-        console.log(loanPercentRangeA)
+
          // b loans percentage
          var loanPercentRangeB = ((indLoansCountRangeb/indLoansCountRangeTotal)* 100)
-         console.log(loanPercentRangeB)
+
           // c loans percentage
         var loanPercentRangeC = ((indLoansCountRangec/indLoansCountRangeTotal)* 100)
-        console.log(loanPercentRangeC)
+
          // d loans percentage
          var loanPercentRangeD = ((indLoansCountRanged/indLoansCountRangeTotal)* 100)
-         console.log(loanPercentRangeD)
+  
           // e loans percentage
         var loanPercentRangeE = ((indLoansCountRangee/indLoansCountRangeTotal)* 100)
-        console.log(loanPercentRangeE)
+
         //
         
         ind1loansPercentofTotal = (((ind1loanslistAll.length)/indLoansCountRangeTotal)*100)
-        console.log(ind1loansPercentofTotal);
         ind2loansPercentofTotal = (((ind2loanslistAll.length)/indLoansCountRangeTotal)*100)
         ind3loansPercentofTotal = (((ind3loanslistAll.length)/indLoansCountRangeTotal)*100)
         ind4loansPercentofTotal = (((ind4loanslistAll.length)/indLoansCountRangeTotal)*100)
