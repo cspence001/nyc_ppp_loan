@@ -20,6 +20,7 @@ Explore PPP loan data for NYC businesses. Analyze 17,550 recipients of loans ≥
 <h5>Dashboard Application</h5>
 <ul>
   <li>Utilizes in-script computation for industry chart and table displays, offering quantitative data review.</li>
+  <li>Interactive Map Display of loan recipients</li>
 </ul>
 <a href="https://nyc-ppp-loans.herokuapp.com/">application</a><br>
 
